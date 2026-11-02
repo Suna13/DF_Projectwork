@@ -264,14 +264,14 @@
     },
     {
       "id":  "UR",
-      "type": "https://github.com/Suna13/DF_Projectwork/blob/main/assets/UR_Pick_and_Place_Station.glb",
+      "type": "https://github.com/Suna13/DF_Projectwork/main/assets/UR_Pick_and_Place_Station.glb",
       "representations": [
         {
           "file": "UR_Pick_and_Place_Station.glb",
           "unit": 1
         }
       ],
-      "position": [-870, 0, 0],
+      "position": [0, 0, 0],
       "rotation": [0, 0, 0],
       "placementRelTo": "building"
     },
