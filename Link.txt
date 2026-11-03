@@ -15,6 +15,8 @@ https://github.com/Suna13/DF_Projectwork/blob/main/DFE_09_env.json
 https://digital-factory.io/vebjs/?inputscene=https://suna13.github.io/DF_Projectwork/DFE_09&repoMod3d=https://difactory.github.io/repository/models/PickPlaceCell/
 
 V1
-https://digital-factory.io/vebjs/?inputscene=https://suna13.github.io/DF_Projectwork/DFE_09_V1&inputenv=https://suna13.github.io/DF_Projectwork/DFE_09_env&inputanim=https://suna13.github.io/DF_Projectwork/DFE_09_anim&repoMod3d=https://suna13.github.io/DF_Projectwork/assets/
+https://digital-factory.io/vebjs/?inputscene=https://suna13.github.io/DF_Projectwork/DFE_09_V1&inputenv=https://suna13.github.io/DF_Projectwork/env/DFE_09_env&inputanim=https://suna13.github.io/DF_Projectwork/anim/DFE_09_anim&repoMod3d=https://suna13.github.io/DF_Projectwork/assets/
+
+https://digital-factory.io/vebjs/?inputscene=https://suna13.github.io/DF_Projectwork/DFE_09_V2&inputenv=https://suna13.github.io/DF_Projectwork/env/DFE_09_env&inputanim=https://suna13.github.io/DF_Projectwork/anim/DFE_09_anim&repoMod3d=https://suna13.github.io/DF_Projectwork/assets/
 
 

@@ -887,17 +887,17 @@
 			"id": "Sensor1",
 			"type": "https://w3id.org/ontoeng/factory#SensorBarrier",
 			"position": [
-				41,
-				22,
-				378
+				0,
+				230,
+				964
 			],
 			"rotation": [
-				-1.5707963267948966,
-				-1.5900000547865225,
+				0,
+				0,
 				0
 			],
 			"placementRelTo": "B1",
-			"container": "https://w3id.org/ontoeng/CW/StateChart02_PT#building",
+			"container": "building",
 			"representations": [
 				{
 					"file": "Sensor.glb",
