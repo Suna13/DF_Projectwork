@@ -175,7 +175,7 @@ The Harel state notation defines several extensions to these basic notions. Firs
 <state id=s">
    <transition event="e" cond="x==1" target="s1"/>
    <transition event="e" target="s2"/>
-   <transition event="\*" target="s3"/>
+   <transition event="\\\*" target="s3"/>
 </state>
 ```
 
@@ -791,7 +791,7 @@ In a conformant SCXML document any extensions to executable content MUST NOT be 
 
 ```xml
 <transition event="ccxml:connection.alerting">
-  <ccxml:accept connectionid="\_event.data.connectionid"/>
+  <ccxml:accept connectionid="\\\_event.data.connectionid"/>
 </transition>
 ```
 
@@ -1200,7 +1200,7 @@ The invoked and invoking process can also communicate via events. In addition to
 In this case, the unique invoke identifier has been stored in the data model location MyInvoke. Since the target attribute is an expression which is evaluated, the following code will extract that identifier and send a message to the invoked VoiceXML session:
 
 ```xml
-  <send type="http://www.w3.org/TR/voicexml21/" targetexpr="'#\_' + myInvoke"/>
+  <send type="http://www.w3.org/TR/voicexml21/" targetexpr="'#\\\_' + myInvoke"/>
 ```
 
 Finally, in the case where the invoked external service is an SCXML session, it can use `<send>` with the special target '\_parent' and type 'scxml' to send events, possibly containing data, to the invoking session.
@@ -1239,9 +1239,9 @@ In the example below, a state machine using an ECMAScript data model invokes a c
    <invoke id=”timer” type=”x-clock” src=”clock.pl”>
      <finalize>
        <script>
-         time.setSeconds(\_event.data.currentSecond);
-         time.setMinutes(\_event.data.currentMinute);
-         time.setHours(\_event.data.currentHour + (\_event.isAm ? 0 : 12) - 1);
+         time.setSeconds(\\\_event.data.currentSecond);
+         time.setMinutes(\\\_event.data.currentMinute);
+         time.setHours(\\\_event.data.currentHour + (\\\_event.isAm ? 0 : 12) - 1);
        </script>
      </finalize>
    </invoke>
@@ -1388,7 +1388,7 @@ The SCXML Processor MUST accept any ECMAScript left-hand-side expression as a lo
     </datamodel>
 
     <onentry>
-        <assign location="employees.employee\[12].salary" expr="42000"/>
+        <assign location="employees.employee\\\[12].salary" expr="42000"/>
     </onentry>
 </state>
 ```
@@ -1406,7 +1406,7 @@ The SCXML Processor MUST accept any ECMAScript expression as a value expression.
     </datamodel>
 
     <onentry>
-        <assign location="myEvent" expr="\_event.data"/>
+        <assign location="myEvent" expr="\\\_event.data"/>
     </onentry>
 </state>
 ```
@@ -1441,15 +1441,15 @@ Then the underlying ECMAScript data model would have the following form:
 {
   // The four properties below are automatically populated by the system
 
-  "\_name"      : "myName" ,
-  "\_sessionid" : "12345"  ,
-  "\_event"     : {
+  "\\\_name"      : "myName" ,
+  "\\\_sessionid" : "12345"  ,
+  "\\\_event"     : {
                     "name" : "foo.bar" ,
                     "data" : {
                                "answer"  :  42
                              }
                  } ,
-  "\_ioprocessors" : {
+  "\\\_ioprocessors" : {
   "http://www.w3.org/TR/scxml/#BasicHTTPEventProcessor" : {
   "location" : "http://example.com/scxml-http/12345"
 }
@@ -1468,7 +1468,7 @@ As an example, here is a sample transition that accesses the \_event variable in
 
 ```xml
 <state id="checkEventName">
-    <transition cond="\_event.name=='foo.bar'" target="nextState">
+    <transition cond="\\\_event.name=='foo.bar'" target="nextState">
      ...
     </transition>
 </state>
@@ -1563,10 +1563,10 @@ Pattern: "event" attribute with an optional "namelist"
 
 ```xml
 <scxml:transition event="email.send">
-  <my:email to="data('\_event')/scxml:property\[@name='email']"
-            cc="data('\_event')/scxml:property\[@name='xmlcontent']/h:headers/h:cc"
-            subject="data('\_event')/scxml:property\[@name='xmlcontent']/h:headers/h:subject"
-            content="data('\_event')/scxml:property\[@name='content']"/>
+  <my:email to="data('\\\_event')/scxml:property\\\[@name='email']"
+            cc="data('\\\_event')/scxml:property\\\[@name='xmlcontent']/h:headers/h:cc"
+            subject="data('\\\_event')/scxml:property\\\[@name='xmlcontent']/h:headers/h:subject"
+            content="data('\\\_event')/scxml:property\\\[@name='content']"/>
 </scxml:transition>
 ```
 
@@ -1600,8 +1600,8 @@ Pattern: "xmlns" attribute with explicit inline content
 
 ```xml
 <scxml:transition event="external.event">
-  <csta:makecall callingDevice="data('\_event')/csta:MakeCall/csta:callingDevice"
-                 callingDirectoryNumber="data('\_event')/csta:MakeCall/csta:callingDirectoryNumber"/>
+  <csta:makecall callingDevice="data('\\\_event')/csta:MakeCall/csta:callingDevice"
+                 callingDirectoryNumber="data('\\\_event')/csta:MakeCall/csta:callingDirectoryNumber"/>
 </scxml:transition>
 ```
 
@@ -1634,10 +1634,10 @@ Pattern: "event" attribute with an optional "namelist"
 
 ```xml
 <scxml:transition event="email.send">
-  <my:email to="\_event.email"
-            cc="\_event.jsoncontent.headers.cc"
-            subject="\_event.jsoncontent.headers.subject"
-            content="\_event.content"/>
+  <my:email to="\\\_event.email"
+            cc="\\\_event.jsoncontent.headers.cc"
+            subject="\\\_event.jsoncontent.headers.subject"
+            content="\\\_event.content"/>
 </scxml:transition>
 ```
 
@@ -1791,7 +1791,7 @@ datatype BlockingQueue
 ```
 
 ```
-datatype HashTable // table\[foo] returns the value associated with foo.  table\[foo] = bar sets the value associated with foo to be bar.
+datatype HashTable // table\\\[foo] returns the value associated with foo.  table\\\[foo] = bar sets the value associated with foo to be bar.
 ```
 
 ### Global variables
@@ -1850,7 +1850,7 @@ procedure interpret(doc):
         initializeDatamodel(datamodel, doc)
     running = true
     executeGlobalScriptElement(doc)
-    enterStates(\[doc.initial.transition])
+    enterStates(\\\[doc.initial.transition])
     mainEventLoop()
 ```
 
@@ -1876,7 +1876,7 @@ procedure mainEventLoop():
                     macrostepDone = true
                 else:
                     internalEvent = internalQueue.dequeue()
-                    datamodel\["\_event"] = internalEvent
+                    datamodel\\\["\\\_event"] = internalEvent
                     enabledTransitions = selectTransitions(internalEvent)
             if not enabledTransitions.isEmpty():
                 microstep(enabledTransitions.toList())
@@ -1899,7 +1899,7 @@ procedure mainEventLoop():
         if isCancelEvent(externalEvent):
             running = false
             continue
-        datamodel\["\_event"] = externalEvent
+        datamodel\\\["\\\_event"] = externalEvent
         for state in configuration:
             for inv in state.invoke:
                 if inv.invokeid == externalEvent.invokeid:
@@ -1939,7 +1939,7 @@ function selectEventlessTransitions():
     enabledTransitions = new OrderedSet()
     atomicStates = configuration.toList().filter(isAtomicState).sort(documentOrder)
     for state in atomicStates:
-        loop: for s in \[state].append(getProperAncestors(state, null)):
+        loop: for s in \\\[state].append(getProperAncestors(state, null)):
             for t in s.transition.sort(documentOrder):
                 if not t.event and conditionMatch(t):
                     enabledTransitions.add(t)
@@ -1959,7 +1959,7 @@ function selectTransitions(event):
     enabledTransitions = new OrderedSet()
     atomicStates = configuration.toList().filter(isAtomicState).sort(documentOrder)
     for state in atomicStates:
-        loop: for s in \[state].append(getProperAncestors(state, null)):
+        loop: for s in \\\[state].append(getProperAncestors(state, null)):
             for t in s.transition.sort(documentOrder):
                 if t.event and nameMatch(t.event, event.name) and conditionMatch(t):
                     enabledTransitions.add(t)
@@ -1982,7 +1982,7 @@ function removeConflictingTransitions(enabledTransitions):
         t1Preempted = false
         transitionsToRemove = new OrderedSet()
         for t2 in filteredTransitions.toList():
-            if computeExitSet(\[t1]).hasIntersection(computeExitSet(\[t2])):
+            if computeExitSet(\\\[t1]).hasIntersection(computeExitSet(\\\[t2])):
                 if isDescendant(t1.source, t2.source):
                     transitionsToRemove.add(t2)
                 else:
@@ -2027,7 +2027,7 @@ procedure exitStates(enabledTransitions):
                 f = lambda s0: isAtomicState(s0) and isDescendant(s0,s)
             else:
                 f = lambda s0: s0.parent == s
-            historyValue\[h.id] = configuration.toList().filter(f)
+            historyValue\\\[h.id] = configuration.toList().filter(f)
     for s in statesToExit:
         for content in s.onexit.sort(documentOrder):
             executeContent(content)
@@ -2083,8 +2083,8 @@ procedure enterStates(enabledTransitions):
             executeContent(content)
         if statesForDefaultEntry.isMember(s):
             executeContent(s.initial.transition)
-        if defaultHistoryContent\[s.id]:
-            executeContent(defaultHistoryContent\[s.id])
+        if defaultHistoryContent\\\[s.id]:
+            executeContent(defaultHistoryContent\\\[s.id])
         if isFinalState(s):
             if isSCXMLElement(s.parent):
                 running = false
@@ -2120,13 +2120,13 @@ First, If state is a history state then add either the history values associated
 ```
 procedure addDescendantStatesToEnter(state,statesToEnter,statesForDefaultEntry, defaultHistoryContent):
     if isHistoryState(state):
-        if historyValue\[state.id]:
-            for s in historyValue\[state.id]:
+        if historyValue\\\[state.id]:
+            for s in historyValue\\\[state.id]:
                 addDescendantStatesToEnter(s,statesToEnter,statesForDefaultEntry, defaultHistoryContent)
-            for s in historyValue\[state.id]:
+            for s in historyValue\\\[state.id]:
                 addAncestorStatesToEnter(s, state.parent, statesToEnter, statesForDefaultEntry, defaultHistoryContent)
         else:
-            defaultHistoryContent\[state.parent.id] = state.transition.content
+            defaultHistoryContent\\\[state.parent.id] = state.transition.content
             for s in state.transition.target:
                 addDescendantStatesToEnter(s,statesToEnter,statesForDefaultEntry, defaultHistoryContent)
             for s in state.transition.target:
@@ -2186,7 +2186,7 @@ function getTransitionDomain(t)
     elif t.type == "internal" and isCompoundState(t.source) and tstates.every(lambda s: isDescendant(s,t.source)):
         return t.source
     else:
-        return findLCCA(\[t.source].append(tstates))
+        return findLCCA(\\\[t.source].append(tstates))
 ```
 
 #### function findLCCA(stateList)
@@ -2209,8 +2209,8 @@ function getEffectiveTargetStates(transition)
     targets = new OrderedSet()
     for s in transition.target
         if isHistoryState(s):
-            if historyValue\[s.id]:
-                targets.union(historyValue\[s.id])
+            if historyValue\\\[s.id]:
+                targets.union(historyValue\\\[s.id])
             else:
                 targets.union(getEffectiveTargetStates(s.transition))
         else:
@@ -2432,10 +2432,10 @@ This SCXML document gives an overview of the SCXML language and shows the use of
       </transition>
 
       <transition event="v3:HelloWorld2.done">
-        <!-- we use \_event.data to access data in the event we're processing.
+        <!-- we use \\\_event.data to access data in the event we're processing.
              Again we assume the v3:HelloWorld2.done is set/sent from outside
              this document -->
-        <ccxml:disconnect connectionid="\_event.data.connectionid"/>
+        <ccxml:disconnect connectionid="\\\_event.data.connectionid"/>
       </transition>
 
       <transition event="ccxml:connection.disconnected" target="Done"/>
@@ -2488,8 +2488,8 @@ The example below shows the implementation of a simple microwave oven using SCXM
 
   <!--  trivial 5 second microwave oven example -->
   <datamodel>
-    <data id="cook\_time" expr="5"/>
-    <data id="door\_closed" expr="true"/>
+    <data id="cook\\\_time" expr="5"/>
+    <data id="door\\\_closed" expr="true"/>
     <data id="timer" expr="0"/>
   </datamodel>
 
@@ -2505,20 +2505,20 @@ The example below shows the implementation of a simple microwave oven using SCXM
     <!-- on/pause state -->
 
     <transition event="turn.off" target="off"/>
-    <transition cond="timer \&gt;= cook\_time" target="off"/>
+    <transition cond="timer \\\&gt;= cook\\\_time" target="off"/>
 
     <state id="idle">
       <!-- default immediate transition if door is shut -->
-      <transition cond="door\_closed" target="cooking"/>
+      <transition cond="door\\\_closed" target="cooking"/>
       <transition event="door.close" target="cooking">
-        <assign location="door\_closed" expr="true"/>
+        <assign location="door\\\_closed" expr="true"/>
         <!-- start cooking -->
       </transition>
     </state>
 
     <state id="cooking">
       <transition event="door.open" target="idle">
-        <assign location="door\_closed" expr="false"/>
+        <assign location="door\\\_closed" expr="false"/>
       </transition>
 
       <!-- a 'time' event is seen once a second -->
@@ -2548,8 +2548,8 @@ The example below shows the implementation of a simple microwave oven using `<pa
   <!-- trivial 5 second microwave oven example -->
   <!-- using parallel and In() predicate -->
   <datamodel>
-    <data id="cook\_time" expr="5"/>
-    <data id="door\_closed" expr="true"/>
+    <data id="cook\\\_time" expr="5"/>
+    <data id="door\\\_closed" expr="true"/>
     <data id="timer" expr="0"/>
   </datamodel>
 
@@ -2574,7 +2574,7 @@ The example below shows the implementation of a simple microwave oven using `<pa
          <!-- on/pause state -->
 
         <transition event="turn.off" target="off"/>
-        <transition cond="timer \&gt;= cook\_time" target="off"/>
+        <transition cond="timer \\\&gt;= cook\\\_time" target="off"/>
 
         <state id="idle">
           <transition cond="In('closed')" target="cooking"/>
@@ -2620,8 +2620,8 @@ The example below shows the implementation of a simple calculator in SCXML.
 <scxml xmlns="http://www.w3.org/2005/07/scxml" version="1.0"
        initial="on" datamodel="ecmascript" name="calc">
     <datamodel>
-         <data id="long\_expr" />
-         <data id="short\_expr" expr="0" />
+         <data id="long\\\_expr" />
+         <data id="short\\\_expr" expr="0" />
          <data id="res" />
     </datamodel>
     <state id="wrapper" initial="on">
@@ -2640,18 +2640,18 @@ The example below shows the implementation of a simple calculator in SCXML.
         </state>
             <transition event="OPER" target="opEntered" />
             <transition event="DIGIT.0" target="zero1">
-                <assign location="short\_expr" expr="''" />
+                <assign location="short\\\_expr" expr="''" />
             </transition>
             <transition event="DIGIT" target="int1">
-                <assign location="short\_expr" expr="''" />
+                <assign location="short\\\_expr" expr="''" />
             </transition>
             <transition event="POINT" target="frac1">
-                <assign location="short\_expr" expr="''" />
+                <assign location="short\\\_expr" expr="''" />
             </transition>
         </state>
         <state id="negated1">
             <onentry>
-                <assign location="short\_expr" expr="'-'" />
+                <assign location="short\\\_expr" expr="'-'" />
                 <send event="DISPLAY.UPDATE" />
             </onentry>
             <transition event="DIGIT.0" target="zero1" />
@@ -2660,27 +2660,27 @@ The example below shows the implementation of a simple calculator in SCXML.
         </state>
         <state id="operand1">
             <state id="zero1">
-                <transition event="DIGIT" cond="\_event.name != 'DIGIT.0'" target="int1" />
+                <transition event="DIGIT" cond="\\\_event.name != 'DIGIT.0'" target="int1" />
                 <transition event="POINT" target="frac1" />
             </state>
             <state id="int1">
                 <transition event="POINT" target="frac1" />
                 <transition event="DIGIT">
-                    <assign location="short\_expr" expr="short\_expr+\_event.name.substr(\_event.name.lastIndexOf('.')+1)" />
+                    <assign location="short\\\_expr" expr="short\\\_expr+\\\_event.name.substr(\\\_event.name.lastIndexOf('.')+1)" />
                     <send event="DISPLAY.UPDATE" />
                 </transition>
                 <onentry>
-                    <assign location="short\_expr" expr="short\_expr+\_event.name.substr(\_event.name.lastIndexOf('.')+1)" />
+                    <assign location="short\\\_expr" expr="short\\\_expr+\\\_event.name.substr(\\\_event.name.lastIndexOf('.')+1)" />
                     <send event="DISPLAY.UPDATE" />
                 </onentry>
             </state>
             <state id="frac1">
                 <onentry>
-                    <assign location="short\_expr" expr="short\_expr+'.'" />
+                    <assign location="short\\\_expr" expr="short\\\_expr+'.'" />
                     <send event="DISPLAY.UPDATE" />
                 </onentry>
                 <transition event="DIGIT">
-                    <assign location="short\_expr" expr="short\_expr+\_event.name.substr(\_event.name.lastIndexOf('.')+1)" />
+                    <assign location="short\\\_expr" expr="short\\\_expr+\\\_event.name.substr(\\\_event.name.lastIndexOf('.')+1)" />
                     <send event="DISPLAY.UPDATE" />
                 </transition>
             </state>
@@ -2693,14 +2693,14 @@ The example below shows the implementation of a simple calculator in SCXML.
             <transition event="DIGIT" target="int2" />
             <onentry>
                 <raise event="CALC.SUB" />
-                <send target="\_internal" event="OP.INSERT">
-                    <param name="operator" expr="\_event.name" />
+                <send target="\\\_internal" event="OP.INSERT">
+                    <param name="operator" expr="\\\_event.name" />
                 </send>
             </onentry>
         </state>
         <state id="negated2">
             <onentry>
-                <assign location="short\_expr" expr="'-'" />
+                <assign location="short\\\_expr" expr="'-'" />
                 <send event="DISPLAY.UPDATE" />
             </onentry>
             <transition event="DIGIT.0" target="zero2" />
@@ -2709,27 +2709,27 @@ The example below shows the implementation of a simple calculator in SCXML.
         </state>
         <state id="operand2">
             <state id="zero2">
-                <transition event="DIGIT" cond="\_event.name != 'DIGIT.0'" target="int2" />
+                <transition event="DIGIT" cond="\\\_event.name != 'DIGIT.0'" target="int2" />
                 <transition event="POINT" target="frac2" />
             </state>
             <state id="int2">
                <transition event="DIGIT">
-                    <assign location="short\_expr" expr="short\_expr+\_event.name.substr(\_event.name.lastIndexOf('.')+1)" />
+                    <assign location="short\\\_expr" expr="short\\\_expr+\\\_event.name.substr(\\\_event.name.lastIndexOf('.')+1)" />
                     <send event="DISPLAY.UPDATE" />
                 </transition>
                 <onentry>
-                    <assign location="short\_expr" expr="short\_expr+\_event.name.substr(\_event.name.lastIndexOf('.')+1)" />
+                    <assign location="short\\\_expr" expr="short\\\_expr+\\\_event.name.substr(\\\_event.name.lastIndexOf('.')+1)" />
                     <send event="DISPLAY.UPDATE" />
                 </onentry>
                 <transition event="POINT" target="frac2" />
             </state>
             <state id="frac2">
                 <onentry>
-                    <assign location="short\_expr" expr="short\_expr +'.'" />
+                    <assign location="short\\\_expr" expr="short\\\_expr +'.'" />
                     <send event="DISPLAY.UPDATE" />
                 </onentry>
                 <transition event="DIGIT">
-                    <assign location="short\_expr" expr="short\_expr +\_event.name.substr(\_event.name.lastIndexOf('.')+1)" />
+                    <assign location="short\\\_expr" expr="short\\\_expr +\\\_event.name.substr(\\\_event.name.lastIndexOf('.')+1)" />
                     <send event="DISPLAY.UPDATE" />
                 </transition>
             </state>
@@ -2745,31 +2745,31 @@ The example below shows the implementation of a simple calculator in SCXML.
         <transition event="C" target="on" />
     </state>
     <transition event="CALC.DO">
-        <assign location="short\_expr" expr="''+ res" />
-        <assign location="long\_expr" expr="''" />
+        <assign location="short\\\_expr" expr="''+ res" />
+        <assign location="long\\\_expr" expr="''" />
         <assign location="res" expr="0" />
     </transition>
     <transition event="CALC.SUB">
-        <if cond="short\_expr!=''">
-            <assign location="long\_expr" expr="long\_expr+'('+short\_expr+')'" />
+        <if cond="short\\\_expr!=''">
+            <assign location="long\\\_expr" expr="long\\\_expr+'('+short\\\_expr+')'" />
         </if>
-        <assign location="res" expr="eval(long\_expr)" />
-        <assign location="short\_expr" expr="''" />
+        <assign location="res" expr="eval(long\\\_expr)" />
+        <assign location="short\\\_expr" expr="''" />
         <send event="DISPLAY.UPDATE" />
     </transition>
     <transition event="DISPLAY.UPDATE">
-        <log level="0" label="'result'" expr=".short\_expr==''?res:short\_expr" />
+        <log level="0" label="'result'" expr=".short\\\_expr==''?res:short\\\_expr" />
     </transition>
     <transition event="OP.INSERT">
-        <log level="0" expr="\_event.data\[0]" />
-        <if cond="\_event.data\[0] == 'OPER.PLUS'">
-            <assign location="long\_expr" expr="long\_expr+'+'" />
-        <elseif cond="\_event.data\[0]=='OPER.MINUS'" />
-            <assign location="long\_expr" expr="long\_expr+'-'" />
-        <elseif cond="\_event.data\[0]=='OPER.STAR'" />
-            <assign location="long\_expr" expr="long\_expr+'\*'" />
-        <elseif cond="\_event.data\[0]=='OPER.DIV'" />
-            <assign location="long\_expr" expr="long\_expr+'/'" />
+        <log level="0" expr="\\\_event.data\\\[0]" />
+        <if cond="\\\_event.data\\\[0] == 'OPER.PLUS'">
+            <assign location="long\\\_expr" expr="long\\\_expr+'+'" />
+        <elseif cond="\\\_event.data\\\[0]=='OPER.MINUS'" />
+            <assign location="long\\\_expr" expr="long\\\_expr+'-'" />
+        <elseif cond="\\\_event.data\\\[0]=='OPER.STAR'" />
+            <assign location="long\\\_expr" expr="long\\\_expr+'\\\*'" />
+        <elseif cond="\\\_event.data\\\[0]=='OPER.DIV'" />
+            <assign location="long\\\_expr" expr="long\\\_expr+'/'" />
         </if>
     </transition>
     </state>
@@ -2784,14 +2784,14 @@ The following two SCXML documents demonstrate the use of Invoke and finalize. Th
 
 ```xml
 <?xml version="1.0"?>
-<?access-control allow="\*"?>
+<?access-control allow="\\\*"?>
 <scxml version="1.0" initial="Intro" datamodel="ecmascript">
   <state id="Intro">
     <invoke src="dialog.vxml#Intro" type="vxml2"/>
     <transition event="success" cond="sessionChrome.playAds" target="PlayAds"/>
-    <transition event="success" cond="!sessionChrome.playAds \&amp;\&amp; ANIQuality"
+    <transition event="success" cond="!sessionChrome.playAds \\\&amp;\\\&amp; ANIQuality"
                     target="ShouldGoBack"/>
-    <transition event="success" cond="!sessionChrome.playAds \&amp;\&amp; !ANIQuality"
+    <transition event="success" cond="!sessionChrome.playAds \\\&amp;\\\&amp; !ANIQuality"
                     target="StartOver"/>
   </state>
 
@@ -2825,7 +2825,7 @@ The following two SCXML documents demonstrate the use of Invoke and finalize. Th
       </finalize>
     </invoke>
     <transition event="highWay" target="HighwayReport"/>
-    <transition event="go\_back" target="StartOver"/>
+    <transition event="go\\\_back" target="StartOver"/>
     <transition event="doOver" target="ShouldGoBack"/>
     <transition event="restart" target="Intro"/>
   </state>
@@ -2841,7 +2841,7 @@ The following two SCXML documents demonstrate the use of Invoke and finalize. Th
       </finalize>
     </invoke>
     <transition event="highway" target="PlayHighway"/>
-    <transition event="go\_back" target="StartOver"/>
+    <transition event="go\\\_back" target="StartOver"/>
     <transition event="doOver" target="HighwayReport"/>
     <transition event="fullreport" target="FullReport"/>
     <transition event="restart" target="Intro"/>
@@ -2855,8 +2855,8 @@ The following two SCXML documents demonstrate the use of Invoke and finalize. Th
         <script>finalizeFullReport();</script>
       </finalize>
     </invoke>
-    <transition event="go\_back" target="HighwayReport"/>
-    <transition event="new\_city" target="StartOver"/>
+    <transition event="go\\\_back" target="HighwayReport"/>
+    <transition event="new\\\_city" target="StartOver"/>
   </state>
 
   <state id="PlayHighway">
@@ -2867,7 +2867,7 @@ The following two SCXML documents demonstrate the use of Invoke and finalize. Th
         <script>finalizePlayHighway();</script>
       </finalize>
     </invoke>
-    <transition event="go\_back" target="HighwayReport"/>
+    <transition event="go\\\_back" target="HighwayReport"/>
   </state>
 </scxml>
 ```
@@ -2878,18 +2878,18 @@ The following example shows a the control flow for a blackjack game.
 
 ```xml
 <?xml version="1.0"?>
-<?access-control allow="\*"?>
+<?access-control allow="\\\*"?>
 <scxml version="1.0" datamodel="ecmascript" initial="master"> <state id="master">
     <initial id="init1">
-      <transition target="\_home"/>
+      <transition target="\\\_home"/>
     </initial>
-    <transition event="new\_dealer" target="NewDealer"/>
-    <transition event="mumble" target="\_home"/> <!-- bail out to caller -->
-    <transition event="silence" target="\_home"/> <!-- bail out to caller -->
-    <state id="\_home">
+    <transition event="new\\\_dealer" target="NewDealer"/>
+    <transition event="mumble" target="\\\_home"/> <!-- bail out to caller -->
+    <transition event="silence" target="\\\_home"/> <!-- bail out to caller -->
+    <state id="\\\_home">
       <onenter>
         <script>
-        \_data = {};
+        \\\_data = {};
         </script>
       </onenter>
       <invoke src="datamodel.v3#InitDataModel" type="vxml3">
@@ -2897,7 +2897,7 @@ The following example shows a the control flow for a blackjack game.
           <script>
           var n;
           for (n in event) {
-              \_data\[n] = event\[n];
+              \\\_data\\\[n] = event\\\[n];
           }
           </script>
         </finalize>
@@ -2950,7 +2950,7 @@ The following example shows a the control flow for a blackjack game.
         <param name="playernewcard" expr="playernewcard"/>
         <param name="playertotal" expr="blackjack.GetTotalOf('caller').toString()"/>
       </invoke>
-      <transition event="success" cond="blackjack.GetTotalOf('caller') \&gt;= 21" target="PlayDone"/>
+      <transition event="success" cond="blackjack.GetTotalOf('caller') \\\&gt;= 21" target="PlayDone"/>
       <transition event="success" target="AskHit"/> <!-- less than 21 -->
     </state>
 
@@ -2964,7 +2964,7 @@ The following example shows a the control flow for a blackjack game.
         <param name="dealertotal" expr="blackjack.GetTotalOf('dealer').toString()"/>
       </invoke>
       <transition event="playagain" target="Intro2"/>
-      <transition event="quit" target="\_home"/>
+      <transition event="quit" target="\\\_home"/>
     </state>
 
     <state id="NewDealer">
@@ -3042,7 +3042,7 @@ Custom Action Elements can be defined in other specifications/namespaces and are
 
 ```xml
 <transition event="ccxml:connection.alerting">
-  <ccxml:accept connectionid="\_event.data.connectionid"/>
+  <ccxml:accept connectionid="\\\_event.data.connectionid"/>
 </transition>
 ```
 
@@ -3053,7 +3053,7 @@ This could be written using a `<send>` element using the following syntax:
 <data name="connectionid"/>
 </datamodel>
 <transition event="ccxml:connection.alerting">
-  <assign location="connectionid" expr="\_event.data.connectionid"/>
+  <assign location="connectionid" expr="\\\_event.data.connectionid"/>
  <send type="ccxml" event="ccxml:accept" namelist="connectionid"/>
 </transition>
 ```
@@ -3077,7 +3077,7 @@ Would need to be modeled in two steps using `<send>` as you would need to do som
   <send type="ccxml" event="ccxml:createcall" namelist="dest"/>
 </onentry>
 <transition event="ccxml:createcall.success">
-   <assign location="connectionid" expr="\_event.data.connectionid"/>
+   <assign location="connectionid" expr="\\\_event.data.connectionid"/>
 </transition>
 ```
 
@@ -3133,7 +3133,7 @@ The "application/scxml+xml" media type is being submitted to the IESG for review
   * TEXT
 * **Person and email address to contact for further information:**
 
-  * Kazuyuki Ashimura, <ashimura@w3.org>.
+  * Kazuyuki Ashimura, [ashimura@w3.org](mailto:ashimura@w3.org).
 * **Intended usage:**
 
   * COMMON
