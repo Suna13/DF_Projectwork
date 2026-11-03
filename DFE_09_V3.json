@@ -597,12 +597,12 @@
             "rest": {
               "on": { "goPick": "pick" },
               "entry": [
-                { "action": "moveTo", "target": "WSA.link1", "rotation": [0, 0.84055, 0] },
-                { "action": "moveTo", "target": "WSA.link2", "rotation": [0, 0, -0.5] },
-                { "action": "moveTo", "target": "WSA.link3", "rotation": [0, 0, 2.045] },
-                { "action": "moveTo", "target": "WSA.link4", "rotation": [0, 0, 1.44] },
-                { "action": "moveTo", "target": "WSA.link5", "rotation": [0, 0.86, 0] },
-                { "action": "moveTo", "target": "WSA.link6", "rotation": [0, 0, 1.511] },
+                { "action": "moveTo", "target": "WSA.link1", "position": [0, 86.05, 0],"rotation": [0, 0.84055, 0] },
+                { "action": "moveTo", "target": "WSA.link2", "position": [0, 65.85, 54], "rotation": [0, 0, -0.5] },
+                { "action": "moveTo", "target": "WSA.link3", "position": [0,  243.65, 23.6],"rotation": [0, 0, 2.045] },
+                { "action": "moveTo", "target": "WSA.link4", "position": [0,  213, -8],"rotation": [0, 0, 1.44] },
+                { "action": "moveTo", "target": "WSA.link5", "position": [0,  42.6, 40.8],"rotation": [0, 0.86, 0] },
+                { "action": "moveTo", "target": "WSA.link6", "position": [0,  40.8, 42.6],"rotation": [0, 0, 1.511] },
                 { "action": "moveTo", "target": "WSA.Gripper1", "position": [0, -38.2, 40] },
                 { "action": "moveTo", "target": "WSA.Gripper2", "position": [0, 39.8, 40] }
               ]
@@ -610,12 +610,12 @@
             "pick": {
               "on": { "goPlace": "place" },
               "entry": [
-                { "action": "moveTo", "target": "WSA.link1", "rotation": [0, 0.0, 0] },
-                { "action": "moveTo", "target": "WSA.link2", "rotation": [0, 0, 0.0] },
-                { "action": "moveTo", "target": "WSA.link3", "rotation": [0, 0, 0.0] },
-                { "action": "moveTo", "target": "WSA.link4", "rotation": [0, 0, 0.0] },
-                { "action": "moveTo", "target": "WSA.link5", "rotation": [0, 0.0, 0] },
-                { "action": "moveTo", "target": "WSA.link6", "rotation": [0, 0, 0.0] },
+{ "action": "moveTo", "target": "WSA.link1", "position": [0, 86.05, 0],"rotation": [0, 0.84055, 0] },
+                { "action": "moveTo", "target": "WSA.link2", "position": [0, 65.85, 54], "rotation": [0, 0, -0.5] },
+                { "action": "moveTo", "target": "WSA.link3", "position": [0,  243.65, 23.6],"rotation": [0, 0, 2.045] },
+                { "action": "moveTo", "target": "WSA.link4", "position": [0,  213, -8],"rotation": [0, 0, 1.44] },
+                { "action": "moveTo", "target": "WSA.link5", "position": [0,  42.6, 40.8],"rotation": [0, 0.86, 0] },
+                { "action": "moveTo", "target": "WSA.link6", "position": [0,  40.8, 42.6],"rotation": [0, 0, 1.511] },
                 { "action": "moveTo", "target": "WSA.Gripper1", "position": [0, -30.7, 40], "delay": 1500 },
                 { "action": "moveTo", "target": "WSA.Gripper2", "position": [0, 32.3, 40], "delay": 1500 },
                 { "action": "sendEvent", "target": "goPlace", "delay": 3000 }
@@ -624,12 +624,12 @@
             "place": {
               "on": { "goRest": "rest" },
               "entry": [
-                { "action": "moveTo", "target": "WSA.link1", "rotation": [0, 0.0, 0] },
-                { "action": "moveTo", "target": "WSA.link2", "rotation": [0, 0, 0.0] },
-                { "action": "moveTo", "target": "WSA.link3", "rotation": [0, 0, 0.0] },
-                { "action": "moveTo", "target": "WSA.link4", "rotation": [0, 0, 0.0] },
-                { "action": "moveTo", "target": "WSA.link5", "rotation": [0, 0.0, 0] },
-                { "action": "moveTo", "target": "WSA.link6", "rotation": [0, 0, 0.0] },
+{ "action": "moveTo", "target": "WSA.link1", "position": [0, 86.05, 0],"rotation": [0, 0.84055, 0] },
+                { "action": "moveTo", "target": "WSA.link2", "position": [0, 65.85, 54], "rotation": [0, 0, -0.5] },
+                { "action": "moveTo", "target": "WSA.link3", "position": [0,  243.65, 23.6],"rotation": [0, 0, 2.045] },
+                { "action": "moveTo", "target": "WSA.link4", "position": [0,  213, -8],"rotation": [0, 0, 1.44] },
+                { "action": "moveTo", "target": "WSA.link5", "position": [0,  42.6, 40.8],"rotation": [0, 0.86, 0] },
+                { "action": "moveTo", "target": "WSA.link6", "position": [0,  40.8, 42.6],"rotation": [0, 0, 1.511] },
                 { "action": "moveTo", "target": "WSA.Gripper1", "position": [0, -38.2, 40], "delay": 1500 },
                 { "action": "moveTo", "target": "WSA.Gripper2", "position": [0, 39.8, 40], "delay": 1500 },
                 { "action": "sendEvent", "target": "goRest", "delay": 3000 }
