@@ -788,7 +788,7 @@
           "unit": 1
         }
       ],
-      "position": [0, 0, 0],
+      "position": [110, 0, 1400],
       "rotation": [0, 0, 0],
       "placementRelTo": "building",
       "properties": {
