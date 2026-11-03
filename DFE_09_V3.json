@@ -162,6 +162,11 @@
                 }
               ]
             },
+            "exit": {
+              "action": "sendEvent",
+              "to": "B1_SC",
+              "target": "B1startF"
+            },
             "type": "atomic"
           }
         },
