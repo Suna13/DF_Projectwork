@@ -572,19 +572,6 @@
       "parentObject": "WSA.EndEffector"
     },
     {
-      "id": "WSA.Conveyor",
-      "type": "https://w3id.org/ontoeng/factory#Conveyor",
-      "representations": [
-        {
-          "file": "UR.glb#Conveyor_Main",
-          "unit": 1
-        }
-      ],
-      "position": [0, 0, 0],
-      "placementRelTo": "WSA",
-      "parentObject": "WSA"
-    },
-    {
       "id": "WSA.PalletPosition",
       "type": "https://w3id.org/ontoeng/factory#PalletPosition",
       "position": [0, 230, -55.55],
@@ -610,12 +597,12 @@
             "rest": {
               "on": { "goPick": "pick" },
               "entry": [
-                { "action": "moveTo", "target": "WSA.link1", "rotation": [0, 0.0, 0] },
-                { "action": "moveTo", "target": "WSA.link2", "rotation": [0, 0, 0.0] },
-                { "action": "moveTo", "target": "WSA.link3", "rotation": [0, 0, 0.0] },
-                { "action": "moveTo", "target": "WSA.link4", "rotation": [0, 0, 0.0] },
-                { "action": "moveTo", "target": "WSA.link5", "rotation": [0, 0.0, 0] },
-                { "action": "moveTo", "target": "WSA.link6", "rotation": [0, 0, 0.0] },
+                { "action": "moveTo", "target": "WSA.link1", "rotation": [0, 0.84055, 0] },
+                { "action": "moveTo", "target": "WSA.link2", "rotation": [0, 0, -0.5] },
+                { "action": "moveTo", "target": "WSA.link3", "rotation": [0, 0, 2.045] },
+                { "action": "moveTo", "target": "WSA.link4", "rotation": [0, 0, 1.44] },
+                { "action": "moveTo", "target": "WSA.link5", "rotation": [0, 0.86, 0] },
+                { "action": "moveTo", "target": "WSA.link6", "rotation": [0, 0, 1.511] },
                 { "action": "moveTo", "target": "WSA.Gripper1", "position": [0, -38.2, 40] },
                 { "action": "moveTo", "target": "WSA.Gripper2", "position": [0, 39.8, 40] }
               ]
@@ -623,7 +610,12 @@
             "pick": {
               "on": { "goPlace": "place" },
               "entry": [
-                "… i 6 giunti nella posa sopra il pezzo …",
+                { "action": "moveTo", "target": "WSA.link1", "rotation": [0, 0.0, 0] },
+                { "action": "moveTo", "target": "WSA.link2", "rotation": [0, 0, 0.0] },
+                { "action": "moveTo", "target": "WSA.link3", "rotation": [0, 0, 0.0] },
+                { "action": "moveTo", "target": "WSA.link4", "rotation": [0, 0, 0.0] },
+                { "action": "moveTo", "target": "WSA.link5", "rotation": [0, 0.0, 0] },
+                { "action": "moveTo", "target": "WSA.link6", "rotation": [0, 0, 0.0] },
                 { "action": "moveTo", "target": "WSA.Gripper1", "position": [0, -30.7, 40], "delay": 1500 },
                 { "action": "moveTo", "target": "WSA.Gripper2", "position": [0, 32.3, 40], "delay": 1500 },
                 { "action": "sendEvent", "target": "goPlace", "delay": 3000 }
@@ -632,7 +624,12 @@
             "place": {
               "on": { "goRest": "rest" },
               "entry": [
-                "… i 6 giunti nella posa sopra l'AGV …",
+                { "action": "moveTo", "target": "WSA.link1", "rotation": [0, 0.0, 0] },
+                { "action": "moveTo", "target": "WSA.link2", "rotation": [0, 0, 0.0] },
+                { "action": "moveTo", "target": "WSA.link3", "rotation": [0, 0, 0.0] },
+                { "action": "moveTo", "target": "WSA.link4", "rotation": [0, 0, 0.0] },
+                { "action": "moveTo", "target": "WSA.link5", "rotation": [0, 0.0, 0] },
+                { "action": "moveTo", "target": "WSA.link6", "rotation": [0, 0, 0.0] },
                 { "action": "moveTo", "target": "WSA.Gripper1", "position": [0, -38.2, 40], "delay": 1500 },
                 { "action": "moveTo", "target": "WSA.Gripper2", "position": [0, 39.8, 40], "delay": 1500 },
                 { "action": "sendEvent", "target": "goRest", "delay": 3000 }
@@ -796,19 +793,6 @@
       "rotation": [0.0414936, -3.0725331, 1.5736656],
       "placementRelTo": "WSB.EndEffector",
       "parentObject": "WSB.EndEffector"
-    },
-    {
-      "id": "WSB.Conveyor",
-      "type": "https://w3id.org/ontoeng/factory#Conveyor",
-      "representations": [
-        {
-          "file": "UR.glb#Conveyor_Main",
-          "unit": 1
-        }
-      ],
-      "position": [0, 0, 0],
-      "placementRelTo": "WSB",
-      "parentObject": "WSB"
     },
     {
       "id": "WSB.PalletPosition",
