@@ -1,0 +1,2062 @@
+{
+	"context": {
+		"UnitOfMeasureScale": 0.01,
+		"Zup": false,
+		"RepoPath": "https://difactory.github.io/repository/models/PickPlaceCell/"
+	},
+	"scene": [
+		"hdrSkyBox",
+		"ground",
+		"https://w3id.org/ontoeng/CW/StateChart02_PT#building",
+		"https://w3id.org/ontoeng/CW/StateChart02_PT#AssetLoader",
+		"https://w3id.org/ontoeng/CW/StateChart02_PT#SnapZone_box",
+		"https://w3id.org/ontoeng/CW/StateChart02_PT#Slide2",
+		"https://w3id.org/ontoeng/CW/StateChart02_PT#Slide1",
+		"https://w3id.org/ontoeng/CW/StateChart02_PT#B1",
+		"https://w3id.org/ontoeng/CW/StateChart02_PT#B2",
+		"https://w3id.org/ontoeng/CW/StateChart02_PT#box",
+		"https://w3id.org/ontoeng/CW/StateChart02_PT#stopper1",
+		"https://w3id.org/ontoeng/CW/StateChart02_PT#stopper2",
+		"https://w3id.org/ontoeng/CW/StateChart02_PT#Receiver_1",
+		"https://w3id.org/ontoeng/CW/StateChart02_PT#Receiver_2",
+		"https://w3id.org/ontoeng/CW/StateChart02_PT#Receiver_3",
+		"https://w3id.org/ontoeng/CW/StateChart02_PT#Receiver_4",
+		"https://w3id.org/ontoeng/CW/StateChart02_PT#Receiver_5",
+		"https://w3id.org/ontoeng/CW/StateChart02_PT#Receiver_6",
+		"https://w3id.org/ontoeng/CW/StateChart02_PT#DiffuseSensorBox_3",
+		"https://w3id.org/ontoeng/CW/StateChart02_PT#DiffuseSensorBox_6",
+		"https://w3id.org/ontoeng/CW/StateChart02_PT#DiffuseSensorBox_5",
+		"https://w3id.org/ontoeng/CW/StateChart02_PT#DiffuseSensorBox_1",
+		"https://w3id.org/ontoeng/CW/StateChart02_PT#DiffuseSensorBox_4",
+		"https://w3id.org/ontoeng/CW/StateChart02_PT#DiffuseSensorBox_2",
+		"https://w3id.org/ontoeng/CW/StateChart02_PT#part_2",
+		"https://w3id.org/ontoeng/CW/StateChart02_PT#SignalPole",
+		"https://w3id.org/ontoeng/CW/StateChart02_PT#SignalPole.GreenLight",
+		"https://w3id.org/ontoeng/CW/StateChart02_PT#SignalPole.RedLight",
+		"https://w3id.org/ontoeng/CW/StateChart02_PT#SignalPole.YellowLight",
+		"https://w3id.org/ontoeng/CW/StateChart02_PT#part_1",
+		"https://w3id.org/ontoeng/CW/StateChart02_PT#part_3",
+		"https://w3id.org/ontoeng/CW/StateChart02_PT#PP",
+		"https://w3id.org/ontoeng/CW/StateChart02_PT#PP.Gripper",
+		"https://w3id.org/ontoeng/CW/StateChart02_PT#PP.Finger1",
+		"https://w3id.org/ontoeng/CW/StateChart02_PT#PP.Finger2",
+		"https://w3id.org/ontoeng/CW/StateChart02_PT#Grid_second",
+		"https://w3id.org/ontoeng/CW/StateChart02_PT#Grid_Hole",
+		"https://w3id.org/ontoeng/CW/StateChart02_PT#CommandBox",
+		"https://w3id.org/ontoeng/CW/StateChart02_PT#CommandBox.GreenButton",
+		"https://w3id.org/ontoeng/CW/StateChart02_PT#CommandBox.RedButton",
+		"https://w3id.org/ontoeng/CW/StateChart02_PT#CommandBox.YellowButton",
+		"https://w3id.org/ontoeng/CW/StateChart02_PT#PP.FloatingX",
+		"https://w3id.org/ontoeng/CW/StateChart02_PT#PP.FloatingZ",
+		"https://w3id.org/ontoeng/CW/StateChart02_PT#PP.FloatingY",
+		"https://w3id.org/ontoeng/CW/StateChart02_PT#CommandBox.EmergencyButton",
+		"https://w3id.org/ontoeng/CW/StateChart02_PT#CommandBox.Potentiometer",
+		"https://w3id.org/ontoeng/CW/StateChart02_PT#CommandBox.StateSelector",
+		"https://w3id.org/ontoeng/CW/StateChart02_PT#part"
+	],
+	"assets": [
+		{
+			"id": "https://w3id.org/ontoeng/CW/StateChart02_PT#goRest",
+			"type": "http://www.learninglab.de/~dolog/fsm/fsm.owl#Event"
+		},
+		{
+			"id": "https://w3id.org/ontoeng/CW/StateChart02_PT#SignalPole.RedLight",
+			"type": "https://w3id.org/ontoeng/factory#Artifact",
+			"parentObject": "https://w3id.org/ontoeng/CW/StateChart02_PT#SignalPole",
+			"representations": [
+				{
+					"file": "SignalPole.glb#RedLight",
+					"unit": 1
+				}
+			]
+		},
+		{
+			"id": "https://w3id.org/ontoeng/CW/StateChart02_PT#CommandBox",
+			"type": "https://w3id.org/ontoeng/factory#Artifact",
+			"position": [
+				87.48000000000002,
+				79.13,
+				368.45000000000005
+			],
+			"rotation": [
+				0,
+				0,
+				-1.5707963267949
+			],
+			"placementRelTo": "https://w3id.org/ontoeng/CW/StateChart02_PT#building",
+			"container": "https://w3id.org/ontoeng/CW/StateChart02_PT#building",
+			"representations": [
+				{
+					"file": "CommandBox.glb",
+					"unit": 1
+				}
+			]
+		},
+		{
+			"id": "https://w3id.org/ontoeng/CW/StateChart02_PT#onGenBox",
+			"type": "http://www.learninglab.de/~dolog/fsm/fsm.owl#Event"
+		},
+		{
+			"id": "https://w3id.org/ontoeng/CW/StateChart02_PT#building",
+			"type": "https://standards.buildingsmart.org/IFC/DEV/IFC4/ADD1/OWL#IfcBuilding",
+			"contains": [
+				"https://w3id.org/ontoeng/CW/StateChart02_PT#AssetLoader",
+				"https://w3id.org/ontoeng/CW/StateChart02_PT#B1",
+				"https://w3id.org/ontoeng/CW/StateChart02_PT#B2",
+				"https://w3id.org/ontoeng/CW/StateChart02_PT#CommandBox",
+				"https://w3id.org/ontoeng/CW/StateChart02_PT#DiffuseSensorBox_1",
+				"https://w3id.org/ontoeng/CW/StateChart02_PT#DiffuseSensorBox_2",
+				"https://w3id.org/ontoeng/CW/StateChart02_PT#DiffuseSensorBox_3",
+				"https://w3id.org/ontoeng/CW/StateChart02_PT#DiffuseSensorBox_4",
+				"https://w3id.org/ontoeng/CW/StateChart02_PT#DiffuseSensorBox_5",
+				"https://w3id.org/ontoeng/CW/StateChart02_PT#DiffuseSensorBox_6",
+				"https://w3id.org/ontoeng/CW/StateChart02_PT#Grid_Hole",
+				"https://w3id.org/ontoeng/CW/StateChart02_PT#Grid_second",
+				"https://w3id.org/ontoeng/CW/StateChart02_PT#PP",
+				"https://w3id.org/ontoeng/CW/StateChart02_PT#SignalPole",
+				"https://w3id.org/ontoeng/CW/StateChart02_PT#Slide1",
+				"https://w3id.org/ontoeng/CW/StateChart02_PT#Slide2",
+				"https://w3id.org/ontoeng/CW/StateChart02_PT#box",
+				"https://w3id.org/ontoeng/CW/StateChart02_PT#part_1",
+				"https://w3id.org/ontoeng/CW/StateChart02_PT#part_2",
+				"https://w3id.org/ontoeng/CW/StateChart02_PT#part_3",
+				"https://w3id.org/ontoeng/CW/StateChart02_PT#stopper1",
+				"https://w3id.org/ontoeng/CW/StateChart02_PT#stopper2"
+			]
+		},
+		{
+			"id": "https://w3id.org/ontoeng/CW/StateChart02_PT#CommandBox.StateSelector",
+			"type": "https://w3id.org/ontoeng/factory#Artifact",
+			"parentObject": "https://w3id.org/ontoeng/CW/StateChart02_PT#CommandBox",
+			"representations": [
+				{
+					"file": "CommandBox.glb#StateSelector",
+					"unit": 1
+				}
+			]
+		},
+		{
+			"id": "https://w3id.org/ontoeng/CW/StateChart02_PT#PP.Gripper",
+			"type": "https://w3id.org/ontoeng/factory#JawGripper",
+			"placementRelTo": "https://w3id.org/ontoeng/CW/StateChart02_PT#PP.FloatingY",
+			"parentObject": "https://w3id.org/ontoeng/CW/StateChart02_PT#PP.FloatingY",
+			"representations": [
+				{
+					"file": "Pick_and_Place_Robot.glb#PP_Gripper",
+					"unit": 1
+				}
+			]
+		},
+		{
+			"id": "https://w3id.org/ontoeng/CW/StateChart02_PT#B1startB",
+			"type": "http://www.learninglab.de/~dolog/fsm/fsm.owl#Event"
+		},
+		{
+			"id": "https://w3id.org/ontoeng/CW/StateChart02_PT#switchOnYellow",
+			"type": "http://www.learninglab.de/~dolog/fsm/fsm.owl#Event"
+		},
+		{
+			"id": "https://w3id.org/ontoeng/CW/StateChart02_PT#part_1",
+			"type": "https://w3id.org/ontoeng/factory#Artifact",
+			"position": [
+				12.899999618530273,
+				22.893362045288086,
+				399.5
+			],
+			"rotation": [
+				-0.00010192352367965486,
+				-0.000003625945476599415,
+				0.00013508479873682836
+			],
+			"placementRelTo": "https://w3id.org/ontoeng/CW/StateChart02_PT#building",
+			"container": "https://w3id.org/ontoeng/CW/StateChart02_PT#building",
+			"representations": [
+				{
+					"file": "Part_green.glb",
+					"unit": 1
+				}
+			],
+			"properties": {
+				"friction": 0.95,
+				"restitution": 0.1,
+				"mass": 1,
+				"MotionType": "DYNAMIC"
+			}
+		},
+		{
+			"id": "https://w3id.org/ontoeng/CW/StateChart02_PT#Slide2",
+			"type": "https://w3id.org/ontoeng/factory#Conveyor",
+			"position": [
+				4.95,
+				22,
+				440.3
+			],
+			"rotation": [
+				0,
+				3.14159265358979,
+				0
+			],
+			"placementRelTo": "https://w3id.org/ontoeng/CW/StateChart02_PT#building",
+			"container": "https://w3id.org/ontoeng/CW/StateChart02_PT#building",
+			"representations": [
+				{
+					"file": "Slide.glb",
+					"unit": 1
+				}
+			],
+			"properties": {
+				"restitution": 0.3,
+				"mass": 0,
+				"ShapeType": "MESH",
+				"MotionType": "ANIMATED",
+				"friction": 0.8
+			},
+			"statechart": {
+				"id": "Slide2_SC",
+				"context": {},
+				"states": {
+					"forward_3": {
+						"id": "forward_3",
+						"meta": {
+							"type": "http://www.learninglab.de/~dolog/fsm/fsm.owl#Simple"
+						},
+						"on": {
+							"stop_2": [
+								{
+									"target": "#idle_3"
+								}
+							]
+						},
+						"entry": [
+							{
+								"type": "ActionSurfaceVelocity",
+								"velocity": [
+									0,
+									0,
+									-3
+								],
+								"target": "https://w3id.org/ontoeng/CW/StateChart02_PT#Slide2"
+							}
+						],
+						"type": "atomic"
+					},
+					"idle_3": {
+						"id": "idle_3",
+						"meta": {
+							"type": "http://www.learninglab.de/~dolog/fsm/fsm.owl#Simple"
+						},
+						"on": {
+							"start_2": [
+								{
+									"target": "#forward_3"
+								}
+							]
+						},
+						"entry": [
+							{
+								"type": "ActionSurfaceVelocity",
+								"velocity": [
+									0,
+									0,
+									0
+								],
+								"target": "https://w3id.org/ontoeng/CW/StateChart02_PT#Slide2"
+							}
+						],
+						"type": "atomic"
+					}
+				},
+				"initial": "idle_3"
+			}
+		},
+		{
+			"id": "https://w3id.org/ontoeng/CW/StateChart02_PT#B1startF",
+			"type": "http://www.learninglab.de/~dolog/fsm/fsm.owl#Event"
+		},
+		{
+			"id": "https://w3id.org/ontoeng/CW/StateChart02_PT#onGenBox_2",
+			"type": "http://www.learninglab.de/~dolog/fsm/fsm.owl#Event"
+		},
+		{
+			"id": "https://w3id.org/ontoeng/CW/StateChart02_PT#Grid_second",
+			"type": "https://w3id.org/ontoeng/factory#Artifact",
+			"position": [
+				-27,
+				53.06,
+				442.85
+			],
+			"rotation": [
+				0,
+				0,
+				-1.5707963267949
+			],
+			"placementRelTo": "https://w3id.org/ontoeng/CW/StateChart02_PT#building",
+			"container": "https://w3id.org/ontoeng/CW/StateChart02_PT#building",
+			"representations": [
+				{
+					"file": "Grid.glb",
+					"unit": 1
+				}
+			]
+		},
+		{
+			"id": "https://w3id.org/ontoeng/CW/StateChart02_PT#start",
+			"type": "http://www.learninglab.de/~dolog/fsm/fsm.owl#Event"
+		},
+		{
+			"id": "https://w3id.org/ontoeng/CW/StateChart02_PT#OBJECT_REMOVED_4",
+			"type": "http://www.learninglab.de/~dolog/fsm/fsm.owl#Event"
+		},
+		{
+			"id": "https://w3id.org/ontoeng/CW/StateChart02_PT#onGenPart_2",
+			"type": "http://www.learninglab.de/~dolog/fsm/fsm.owl#Event"
+		},
+		{
+			"id": "https://w3id.org/ontoeng/CW/StateChart02_PT#CommandBox.Potentiometer",
+			"type": "https://w3id.org/ontoeng/factory#Artifact",
+			"parentObject": "https://w3id.org/ontoeng/CW/StateChart02_PT#CommandBox",
+			"representations": [
+				{
+					"file": "CommandBox.glb#Potentiometer",
+					"unit": 1
+				}
+			]
+		},
+		{
+			"id": "https://w3id.org/ontoeng/CW/StateChart02_PT#OBJECT_REMOVED_3",
+			"type": "http://www.learninglab.de/~dolog/fsm/fsm.owl#Event"
+		},
+		{
+			"id": "https://w3id.org/ontoeng/CW/StateChart02_PT#CommandBox.YellowButton",
+			"type": "https://w3id.org/ontoeng/factory#Artifact",
+			"parentObject": "https://w3id.org/ontoeng/CW/StateChart02_PT#CommandBox",
+			"representations": [
+				{
+					"file": "CommandBox.glb#YellowButton",
+					"unit": 1
+				}
+			]
+		},
+		{
+			"id": "https://w3id.org/ontoeng/CW/StateChart02_PT#OBJECT_REMOVED_2",
+			"type": "http://www.learninglab.de/~dolog/fsm/fsm.owl#Event"
+		},
+		{
+			"id": "https://w3id.org/ontoeng/CW/StateChart02_PT#DiffuseSensorBox_3",
+			"type": "https://w3id.org/ontoeng/factory#SensorBarrier",
+			"position": [
+				41,
+				22,
+				270
+			],
+			"rotation": [
+				-1.5707963267948966,
+				-1.5900000547865225,
+				0
+			],
+			"placementRelTo": "https://w3id.org/ontoeng/CW/StateChart02_PT#building",
+			"container": "https://w3id.org/ontoeng/CW/StateChart02_PT#building",
+			"representations": [
+				{
+					"file": "Sensor.glb",
+					"unit": 1
+				}
+			],
+			"statechart": {
+				"id": "Sensor3_SC",
+				"context": {},
+				"states": {
+					"Detecting_3": {
+						"id": "Detecting_3",
+						"meta": {
+							"type": "https://w3id.org/ontoeng/factory#SensorDetecting"
+						},
+						"on": {
+							"OBJECT_REMOVED_3": [
+								{
+									"target": "#Idle_3"
+								}
+							]
+						},
+						"type": "atomic"
+					},
+					"Idle_3": {
+						"id": "Idle_3",
+						"meta": {
+							"type": "https://w3id.org/ontoeng/factory#SensorIdle"
+						},
+						"on": {
+							"OBJECT_DETECTED_3": [
+								{
+									"target": "#Detecting_3"
+								}
+							]
+						},
+						"type": "atomic"
+					}
+				},
+				"initial": "Idle_3"
+			}
+		},
+		{
+			"id": "https://w3id.org/ontoeng/CW/StateChart02_PT#OBJECT_DETECTED_2",
+			"type": "http://www.learninglab.de/~dolog/fsm/fsm.owl#Event"
+		},
+		{
+			"id": "https://w3id.org/ontoeng/CW/StateChart02_PT#DiffuseSensorBox_6",
+			"type": "https://w3id.org/ontoeng/factory#SensorBarrier",
+			"position": [
+				3.3100000000000005,
+				22,
+				432
+			],
+			"rotation": [
+				-1.5707963267948966,
+				1.5699999977275867,
+				0
+			],
+			"placementRelTo": "https://w3id.org/ontoeng/CW/StateChart02_PT#building",
+			"container": "https://w3id.org/ontoeng/CW/StateChart02_PT#building",
+			"representations": [
+				{
+					"file": "Sensor.glb",
+					"unit": 1
+				}
+			],
+			"statechart": {
+				"id": "Sensor6_SC",
+				"context": {},
+				"states": {
+					"Detecting_6": {
+						"id": "Detecting_6",
+						"meta": {
+							"type": "https://w3id.org/ontoeng/factory#SensorDetecting"
+						},
+						"on": {
+							"OBJECT_REMOVED_6": [
+								{
+									"target": "#Idle_6"
+								}
+							]
+						},
+						"type": "atomic"
+					},
+					"Idle_6": {
+						"id": "Idle_6",
+						"meta": {
+							"type": "https://w3id.org/ontoeng/factory#SensorIdle"
+						},
+						"on": {
+							"OBJECT_DETECTED_6": [
+								{
+									"target": "#Detecting_6"
+								}
+							]
+						},
+						"type": "atomic"
+					}
+				},
+				"initial": "Idle_6"
+			}
+		},
+		{
+			"id": "https://w3id.org/ontoeng/CW/StateChart02_PT#PP.FloatingY",
+			"type": "https://w3id.org/ontoeng/factory#RobotArm",
+			"placementRelTo": "https://w3id.org/ontoeng/CW/StateChart02_PT#PP.FloatingZ",
+			"parentObject": "https://w3id.org/ontoeng/CW/StateChart02_PT#PP.FloatingZ",
+			"representations": [
+				{
+					"file": "Pick_and_Place_Robot.glb#PP_Floating_Y",
+					"unit": 1
+				}
+			],
+			"position": [
+				-0.6000000000000001,
+				-4,
+				-17.1
+			]
+		},
+		{
+			"id": "https://w3id.org/ontoeng/CW/StateChart02_PT#startRot",
+			"type": "http://www.learninglab.de/~dolog/fsm/fsm.owl#Event"
+		},
+		{
+			"id": "https://w3id.org/ontoeng/CW/StateChart02_PT#B1",
+			"type": "https://w3id.org/ontoeng/factory#Conveyor",
+			"position": [
+				26,
+				0,
+				315
+			],
+			"placementRelTo": "https://w3id.org/ontoeng/CW/StateChart02_PT#building",
+			"container": "https://w3id.org/ontoeng/CW/StateChart02_PT#building",
+			"representations": [
+				{
+					"file": "Conveyor.glb",
+					"unit": 1
+				}
+			],
+			"properties": {
+				"mass": 0,
+				"MotionType": "ANIMATED",
+				"friction": 0,
+				"restitution": 0.3
+			},
+			"statechart": {
+				"id": "B1_SC",
+				"context": {},
+				"states": {
+					"backward": {
+						"id": "backward",
+						"meta": {
+							"type": "http://www.learninglab.de/~dolog/fsm/fsm.owl#Simple"
+						},
+						"on": {
+							"B1stop": [
+								{
+									"target": "#idle"
+								}
+							]
+						},
+						"entry": [
+							{
+								"type": "ActionSurfaceVelocity",
+								"velocity": [
+									0,
+									0,
+									-8
+								],
+								"target": "https://w3id.org/ontoeng/CW/StateChart02_PT#B1"
+							}
+						],
+						"type": "atomic"
+					},
+					"forward": {
+						"id": "forward",
+						"meta": {
+							"type": "http://www.learninglab.de/~dolog/fsm/fsm.owl#Simple"
+						},
+						"on": {
+							"B1stop": [
+								{
+									"target": "#idle"
+								}
+							]
+						},
+						"entry": [
+							{
+								"type": "ActionSurfaceVelocity",
+								"target": "https://w3id.org/ontoeng/CW/StateChart02_PT#B1",
+								"velocity": [
+									0,
+									0,
+									8
+								]
+							}
+						],
+						"type": "atomic"
+					},
+					"idle": {
+						"id": "idle",
+						"meta": {
+							"type": "http://www.learninglab.de/~dolog/fsm/fsm.owl#Simple"
+						},
+						"on": {
+							"B1startB": [
+								{
+									"target": "#backward"
+								}
+							],
+							"B1startF": [
+								{
+									"target": "#forward"
+								}
+							]
+						},
+						"entry": [
+							{
+								"type": "ActionSurfaceVelocity",
+								"velocity": [
+									0,
+									0,
+									0
+								],
+								"target": "https://w3id.org/ontoeng/CW/StateChart02_PT#B1"
+							}
+						],
+						"type": "atomic"
+					}
+				},
+				"initial": "idle"
+			}
+		},
+		{
+			"id": "https://w3id.org/ontoeng/CW/StateChart02_PT#OBJECT_DETECTED_5",
+			"type": "http://www.learninglab.de/~dolog/fsm/fsm.owl#Event"
+		},
+		{
+			"id": "https://w3id.org/ontoeng/CW/StateChart02_PT#part_3",
+			"type": "https://w3id.org/ontoeng/factory#Artifact",
+			"position": [
+				31.5,
+				22.893362045288086,
+				287.5
+			],
+			"rotation": [
+				-0.00010255081078861116,
+				2.3817903617539875e-9,
+				0.00013631570585278472
+			],
+			"placementRelTo": "https://w3id.org/ontoeng/CW/StateChart02_PT#building",
+			"container": "https://w3id.org/ontoeng/CW/StateChart02_PT#building",
+			"representations": [
+				{
+					"file": "Part_green.glb",
+					"unit": 1
+				}
+			],
+			"properties": {
+				"mass": 1,
+				"friction": 0.95,
+				"restitution": 0.1,
+				"MotionType": "DYNAMIC"
+			}
+		},
+		{
+			"id": "https://w3id.org/ontoeng/CW/StateChart02_PT#OBJECT_DETECTED_6",
+			"type": "http://www.learninglab.de/~dolog/fsm/fsm.owl#Event"
+		},
+		{
+			"id": "https://w3id.org/ontoeng/CW/StateChart02_PT#switchOff",
+			"type": "http://www.learninglab.de/~dolog/fsm/fsm.owl#Event"
+		},
+		{
+			"id": "https://w3id.org/ontoeng/CW/StateChart02_PT#OBJECT_DETECTED_3",
+			"type": "http://www.learninglab.de/~dolog/fsm/fsm.owl#Event"
+		},
+		{
+			"id": "https://w3id.org/ontoeng/CW/StateChart02_PT#PP.Finger1",
+			"type": "https://w3id.org/ontoeng/factory#JawFinger",
+			"placementRelTo": "https://w3id.org/ontoeng/CW/StateChart02_PT#PP.Gripper",
+			"parentObject": "https://w3id.org/ontoeng/CW/StateChart02_PT#PP.Gripper",
+			"representations": [
+				{
+					"file": "Pick_and_Place_Robot.glb#PP_Finger1",
+					"unit": 1
+				}
+			],
+			"properties": {
+				"mass": 0,
+				"restitution": 0,
+				"MotionType": "ANIMATED",
+				"friction": 0
+			},
+			"position": [
+				-0.000005305845007796961,
+				-3.7999995052814484,
+				3.799999877810478
+			],
+			"rotation": [
+				0,
+				-1.1852223025243789e-7,
+				0
+			]
+		},
+		{
+			"id": "https://w3id.org/ontoeng/CW/StateChart02_PT#OBJECT_DETECTED_4",
+			"type": "http://www.learninglab.de/~dolog/fsm/fsm.owl#Event"
+		},
+		{
+			"id": "https://w3id.org/ontoeng/CW/StateChart02_PT#box",
+			"type": "https://w3id.org/ontoeng/factory#Pallet",
+			"position": [
+				31.700000762939453,
+				22.997709274291992,
+				403
+			],
+			"rotation": [
+				-1.2297894607424386e-7,
+				3.253232357749567e-10,
+				-3.8992078545742434e-7
+			],
+			"placementRelTo": "https://w3id.org/ontoeng/CW/StateChart02_PT#building",
+			"container": "https://w3id.org/ontoeng/CW/StateChart02_PT#building",
+			"representations": [
+				{
+					"file": "Box_part.glb",
+					"unit": 1
+				}
+			],
+			"properties": {
+				"friction": 0.95,
+				"restitution": 0.1,
+				"mass": 1,
+				"MotionType": "DYNAMIC"
+			}
+		},
+		{
+			"id": "https://w3id.org/ontoeng/CW/StateChart02_PT#SignalPole",
+			"type": "https://standards.buildingsmart.org/IFC/DEV/IFC4/ADD1/OWL#IfcActuator",
+			"position": [
+				72.41,
+				0,
+				378.78
+			],
+			"rotation": [
+				-1.5707963267948966,
+				0,
+				0
+			],
+			"placementRelTo": "https://w3id.org/ontoeng/CW/StateChart02_PT#building",
+			"container": "https://w3id.org/ontoeng/CW/StateChart02_PT#building",
+			"representations": [
+				{
+					"file": "SignalPole.glb",
+					"unit": 1
+				}
+			],
+			"properties": {
+				"MotionType": "ANIMATED",
+				"friction": 0.95,
+				"restitution": 0.3,
+				"mass": 1
+			},
+			"statechart": {
+				"id": "TrafficLights_SC",
+				"context": {},
+				"states": {
+					"green": {
+						"id": "green",
+						"meta": {
+							"type": "http://www.learninglab.de/~dolog/fsm/fsm.owl#Simple"
+						},
+						"on": {
+							"switchOff": [
+								{
+									"target": "#idle_4"
+								}
+							]
+						},
+						"entry": [
+							{
+								"type": "ActionSetRepresentation",
+								"color": [
+									0,
+									1,
+									0
+								],
+								"intensity": 1,
+								"target": "https://w3id.org/ontoeng/CW/StateChart02_PT#SignalPole.GreenLight"
+							}
+						],
+						"exit": [
+							{
+								"type": "ActionSetRepresentation",
+								"intensity": 0.1,
+								"target": "https://w3id.org/ontoeng/CW/StateChart02_PT#SignalPole.GreenLight"
+							}
+						],
+						"type": "atomic"
+					},
+					"idle_4": {
+						"id": "idle_4",
+						"meta": {
+							"type": "http://www.learninglab.de/~dolog/fsm/fsm.owl#Simple"
+						},
+						"on": {
+							"switchOnYellow": [
+								{
+									"target": "#yellow"
+								}
+							],
+							"switchOnRed": [
+								{
+									"target": "#red"
+								}
+							],
+							"switchOnGreen": [
+								{
+									"target": "#green"
+								}
+							]
+						},
+						"type": "atomic"
+					},
+					"red": {
+						"id": "red",
+						"meta": {
+							"type": "http://www.learninglab.de/~dolog/fsm/fsm.owl#Simple"
+						},
+						"on": {
+							"switchOff": [
+								{
+									"target": "#idle_4"
+								}
+							]
+						},
+						"entry": [
+							{
+								"type": "ActionSetRepresentation",
+								"intensity": 1,
+								"target": "https://w3id.org/ontoeng/CW/StateChart02_PT#SignalPole.RedLight"
+							}
+						],
+						"exit": [
+							{
+								"type": "ActionSetRepresentation",
+								"intensity": 0.1,
+								"target": "https://w3id.org/ontoeng/CW/StateChart02_PT#SignalPole.RedLight"
+							}
+						],
+						"type": "atomic"
+					},
+					"yellow": {
+						"id": "yellow",
+						"meta": {
+							"type": "http://www.learninglab.de/~dolog/fsm/fsm.owl#Simple"
+						},
+						"on": {
+							"switchOff": [
+								{
+									"target": "#idle_4"
+								}
+							]
+						},
+						"entry": [
+							{
+								"type": "ActionSetRepresentation",
+								"intensity": 1,
+								"target": "https://w3id.org/ontoeng/CW/StateChart02_PT#SignalPole.YellowLight"
+							}
+						],
+						"exit": [
+							{
+								"type": "ActionSetRepresentation",
+								"intensity": 0.1,
+								"target": "https://w3id.org/ontoeng/CW/StateChart02_PT#SignalPole.YellowLight"
+							}
+						],
+						"type": "atomic"
+					}
+				},
+				"initial": "idle_4"
+			}
+		},
+		{
+			"id": "https://w3id.org/ontoeng/CW/StateChart02_PT#SignalPole.YellowLight",
+			"type": "https://w3id.org/ontoeng/factory#Artifact",
+			"parentObject": "https://w3id.org/ontoeng/CW/StateChart02_PT#SignalPole",
+			"representations": [
+				{
+					"file": "SignalPole.glb#YellowLight",
+					"unit": 1
+				}
+			]
+		},
+		{
+			"id": "https://w3id.org/ontoeng/CW/StateChart02_PT#AssetLoader",
+			"type": "https://w3id.org/ontoeng/factory#Actuator",
+			"placementRelTo": "https://w3id.org/ontoeng/CW/StateChart02_PT#building",
+			"container": "https://w3id.org/ontoeng/CW/StateChart02_PT#building",
+			"statechart": {
+				"id": "AssetLoader_SC",
+				"context": {},
+				"states": {
+					"AL_idle": {
+						"id": "AL_idle",
+						"meta": {
+							"type": "http://www.learninglab.de/~dolog/fsm/fsm.owl#Simple"
+						},
+						"on": {
+							"onGenBox_2": [
+								{
+									"target": "#genBox_2"
+								}
+							],
+							"onGenPart_2": [
+								{
+									"target": "#genPart_2"
+								}
+							]
+						},
+						"type": "atomic"
+					},
+					"genBox_2": {
+						"id": "genBox_2",
+						"meta": {
+							"type": "http://www.learninglab.de/~dolog/fsm/fsm.owl#Simple"
+						},
+						"entry": [
+							{
+								"type": "ActionGenerateAsset",
+								"rotation": [
+									0,
+									0,
+									0
+								],
+								"position": [
+									31.700000000000003,
+									23.400000000000002,
+									440
+								],
+								"target": "https://w3id.org/ontoeng/CW/StateChart02_PT#box"
+							}
+						],
+						"after": {
+							"1000": {
+								"target": "#AL_idle"
+							}
+						},
+						"type": "atomic"
+					},
+					"genPart_2": {
+						"id": "genPart_2",
+						"meta": {
+							"type": "http://www.learninglab.de/~dolog/fsm/fsm.owl#Simple"
+						},
+						"entry": [
+							{
+								"type": "ActionGenerateAsset",
+								"position": [
+									12.9,
+									23.400000000000002,
+									250
+								],
+								"target": "https://w3id.org/ontoeng/CW/StateChart02_PT#part"
+							}
+						],
+						"after": {
+							"300": {
+								"target": "#AL_idle"
+							}
+						},
+						"type": "atomic"
+					}
+				},
+				"initial": "AL_idle"
+			}
+		},
+		{
+			"id": "https://w3id.org/ontoeng/CW/StateChart02_PT#start_2",
+			"type": "http://www.learninglab.de/~dolog/fsm/fsm.owl#Event"
+		},
+		{
+			"id": "https://w3id.org/ontoeng/CW/StateChart02_PT#part",
+			"type": "https://w3id.org/ontoeng/factory#Artifact",
+			"position": [
+				0,
+				-6465.6240234375,
+				0
+			],
+			"placementRelTo": "https://w3id.org/ontoeng/CW/StateChart02_PT#building",
+			"representations": [
+				{
+					"file": "Part_blue.glb",
+					"unit": 1
+				}
+			],
+			"properties": {
+				"restitution": 0.1,
+				"mass": 1,
+				"friction": 0.95,
+				"MotionType": "DYNAMIC"
+			}
+		},
+		{
+			"id": "https://w3id.org/ontoeng/CW/StateChart02_PT#SignalPole.GreenLight",
+			"type": "https://w3id.org/ontoeng/factory#Artifact",
+			"parentObject": "https://w3id.org/ontoeng/CW/StateChart02_PT#SignalPole",
+			"representations": [
+				{
+					"file": "SignalPole.glb#GreenLight",
+					"unit": 1
+				}
+			]
+		},
+		{
+			"id": "https://w3id.org/ontoeng/CW/StateChart02_PT#Grid_Hole",
+			"type": "https://w3id.org/ontoeng/factory#Artifact",
+			"position": [
+				95.02,
+				40.300000000000004,
+				358.39
+			],
+			"rotation": [
+				0,
+				0,
+				1.5707963267949
+			],
+			"placementRelTo": "https://w3id.org/ontoeng/CW/StateChart02_PT#building",
+			"container": "https://w3id.org/ontoeng/CW/StateChart02_PT#building",
+			"representations": [
+				{
+					"file": "Grid_Hole.glb",
+					"unit": 1
+				}
+			],
+			"statechart": {
+				"id": "GridHole_SC",
+				"context": {},
+				"states": {
+					"rest_2": {
+						"id": "rest_2",
+						"meta": {
+							"type": "http://www.learninglab.de/~dolog/fsm/fsm.owl#Simple"
+						},
+						"on": {
+							"startRot": [
+								{
+									"target": "#rotate"
+								}
+							]
+						},
+						"entry": [
+							{
+								"type": "ActionMoveAdditive",
+								"duration": 1000,
+								"rotation": [
+									0,
+									0,
+									0
+								],
+								"target": "https://w3id.org/ontoeng/CW/StateChart02_PT#Grid_Hole"
+							}
+						],
+						"type": "atomic"
+					},
+					"rotate": {
+						"id": "rotate",
+						"meta": {
+							"type": "http://www.learninglab.de/~dolog/fsm/fsm.owl#Simple"
+						},
+						"on": {
+							"goRest_2": [
+								{
+									"target": "#rest_2"
+								}
+							]
+						},
+						"entry": [
+							{
+								"type": "ActionMoveAdditive",
+								"loop": true,
+								"duration": 1000,
+								"rotation": [
+									0,
+									2,
+									0
+								],
+								"target": "https://w3id.org/ontoeng/CW/StateChart02_PT#Grid_Hole"
+							}
+						],
+						"type": "atomic"
+					}
+				},
+				"initial": "rest_2"
+			}
+		},
+		{
+			"id": "https://w3id.org/ontoeng/CW/StateChart02_PT#OBJECT_REMOVED_6",
+			"type": "http://www.learninglab.de/~dolog/fsm/fsm.owl#Event"
+		},
+		{
+			"id": "https://w3id.org/ontoeng/CW/StateChart02_PT#OBJECT_REMOVED_5",
+			"type": "http://www.learninglab.de/~dolog/fsm/fsm.owl#Event"
+		},
+		{
+			"id": "https://w3id.org/ontoeng/CW/StateChart02_PT#switchOnRed",
+			"type": "http://www.learninglab.de/~dolog/fsm/fsm.owl#Event"
+		},
+		{
+			"id": "https://w3id.org/ontoeng/CW/StateChart02_PT#goPick",
+			"type": "http://www.learninglab.de/~dolog/fsm/fsm.owl#Event"
+		},
+		{
+			"id": "https://w3id.org/ontoeng/CW/StateChart02_PT#B1stop",
+			"type": "http://www.learninglab.de/~dolog/fsm/fsm.owl#Event"
+		},
+		{
+			"id": "https://w3id.org/ontoeng/CW/StateChart02_PT#SnapZone_box",
+			"type": "https://w3id.org/ontoeng/factory#Artifact",
+			"placementRelTo": "https://w3id.org/ontoeng/CW/StateChart02_PT#B1",
+			"parentObject": "https://w3id.org/ontoeng/CW/StateChart02_PT#B1"
+		},
+		{
+			"id": "https://w3id.org/ontoeng/CW/StateChart02_PT#stopper1",
+			"type": "https://w3id.org/ontoeng/factory#Artifact",
+			"position": [
+				5.5,
+				23,
+				403
+			],
+			"rotation": [
+				0,
+				0,
+				1.5707963267949
+			],
+			"placementRelTo": "https://w3id.org/ontoeng/CW/StateChart02_PT#building",
+			"container": "https://w3id.org/ontoeng/CW/StateChart02_PT#building",
+			"representations": [
+				{
+					"file": "Stopper.glb",
+					"unit": 1
+				}
+			],
+			"properties": {
+				"MotionType": "ANIMATED",
+				"mass": 0,
+				"restitution": 0.1,
+				"friction": 0.95
+			}
+		},
+		{
+			"id": "https://w3id.org/ontoeng/CW/StateChart02_PT#Grid",
+			"type": "https://w3id.org/ontoeng/factory#Artifact",
+			"position": [
+				-27,
+				53.06,
+				377
+			],
+			"rotation": [
+				0,
+				0,
+				-1.5707963267949
+			],
+			"placementRelTo": "https://w3id.org/ontoeng/CW/StateChart02_PT#building",
+			"representations": [
+				{
+					"file": "Grid.glb",
+					"unit": 1
+				}
+			]
+		},
+		{
+			"id": "https://w3id.org/ontoeng/CW/StateChart02_PT#goRest_2",
+			"type": "http://www.learninglab.de/~dolog/fsm/fsm.owl#Event"
+		},
+		{
+			"id": "https://w3id.org/ontoeng/CW/StateChart02_PT#goPlace",
+			"type": "http://www.learninglab.de/~dolog/fsm/fsm.owl#Event"
+		},
+		{
+			"id": "https://w3id.org/ontoeng/CW/StateChart02_PT#Receiver_1",
+			"type": "https://w3id.org/ontoeng/factory#SensorBarrierReceiver",
+			"position": [
+				0,
+				-19.8,
+				1.2000000000000002
+			],
+			"rotation": [
+				3.2310891488651735e-15,
+				3.141592653589793,
+				3.141592653589793
+			],
+			"placementRelTo": "https://w3id.org/ontoeng/CW/StateChart02_PT#DiffuseSensorBox_1",
+			"parentObject": "https://w3id.org/ontoeng/CW/StateChart02_PT#DiffuseSensorBox_1",
+			"representations": [
+				{
+					"file": "Sensor2.glb",
+					"unit": 1
+				}
+			]
+		},
+		{
+			"id": "https://w3id.org/ontoeng/CW/StateChart02_PT#stop",
+			"type": "http://www.learninglab.de/~dolog/fsm/fsm.owl#Event"
+		},
+		{
+			"id": "https://w3id.org/ontoeng/CW/StateChart02_PT#part_2",
+			"type": "https://w3id.org/ontoeng/factory#Artifact",
+			"position": [
+				12.899999618530273,
+				22.89336395263672,
+				372.5
+			],
+			"rotation": [
+				-0.00010192431698748567,
+				-0.000003622569473974112,
+				0.00013508456573557565
+			],
+			"placementRelTo": "https://w3id.org/ontoeng/CW/StateChart02_PT#building",
+			"container": "https://w3id.org/ontoeng/CW/StateChart02_PT#building",
+			"representations": [
+				{
+					"file": "Part_blue.glb",
+					"unit": 1
+				}
+			],
+			"properties": {
+				"restitution": 0.1,
+				"mass": 1,
+				"friction": 0.95,
+				"MotionType": "DYNAMIC"
+			}
+		},
+		{
+			"id": "https://w3id.org/ontoeng/CW/StateChart02_PT#Receiver_2",
+			"type": "https://w3id.org/ontoeng/factory#SensorBarrierReceiver",
+			"position": [
+				0,
+				-19.8,
+				1.2000000000000002
+			],
+			"rotation": [
+				3.2310891488651735e-15,
+				3.141592653589793,
+				3.141592653589793
+			],
+			"placementRelTo": "https://w3id.org/ontoeng/CW/StateChart02_PT#DiffuseSensorBox_2",
+			"parentObject": "https://w3id.org/ontoeng/CW/StateChart02_PT#DiffuseSensorBox_2",
+			"representations": [
+				{
+					"file": "Sensor2.glb",
+					"unit": 1
+				}
+			]
+		},
+		{
+			"id": "https://w3id.org/ontoeng/CW/StateChart02_PT#DiffuseSensorBox_5",
+			"type": "https://w3id.org/ontoeng/factory#SensorBarrier",
+			"position": [
+				3.3100000000000005,
+				22,
+				367
+			],
+			"rotation": [
+				-1.5707963267948966,
+				1.5699999977275867,
+				0
+			],
+			"placementRelTo": "https://w3id.org/ontoeng/CW/StateChart02_PT#building",
+			"container": "https://w3id.org/ontoeng/CW/StateChart02_PT#building",
+			"representations": [
+				{
+					"file": "Sensor.glb",
+					"unit": 1
+				}
+			],
+			"statechart": {
+				"id": "Sensor5_SC",
+				"context": {},
+				"states": {
+					"Detecting_5": {
+						"id": "Detecting_5",
+						"meta": {
+							"type": "https://w3id.org/ontoeng/factory#SensorDetecting"
+						},
+						"on": {
+							"OBJECT_REMOVED_5": [
+								{
+									"target": "#Idle_5"
+								}
+							]
+						},
+						"type": "atomic"
+					},
+					"Idle_5": {
+						"id": "Idle_5",
+						"meta": {
+							"type": "https://w3id.org/ontoeng/factory#SensorIdle"
+						},
+						"on": {
+							"OBJECT_DETECTED_5": [
+								{
+									"target": "#Detecting_5"
+								}
+							]
+						},
+						"type": "atomic"
+					}
+				},
+				"initial": "Idle_5"
+			}
+		},
+		{
+			"id": "https://w3id.org/ontoeng/CW/StateChart02_PT#CommandBox.RedButton",
+			"type": "https://w3id.org/ontoeng/factory#Artifact",
+			"parentObject": "https://w3id.org/ontoeng/CW/StateChart02_PT#CommandBox",
+			"representations": [
+				{
+					"file": "CommandBox.glb#RedButton",
+					"unit": 1
+				}
+			]
+		},
+		{
+			"id": "https://w3id.org/ontoeng/CW/StateChart02_PT#Receiver_3",
+			"type": "https://w3id.org/ontoeng/factory#SensorBarrierReceiver",
+			"position": [
+				0,
+				-19.8,
+				1.2000000000000002
+			],
+			"rotation": [
+				3.2310891488651735e-15,
+				3.141592653589793,
+				3.141592653589793
+			],
+			"placementRelTo": "https://w3id.org/ontoeng/CW/StateChart02_PT#DiffuseSensorBox_3",
+			"parentObject": "https://w3id.org/ontoeng/CW/StateChart02_PT#DiffuseSensorBox_3",
+			"representations": [
+				{
+					"file": "Sensor2.glb",
+					"unit": 1
+				}
+			]
+		},
+		{
+			"id": "https://w3id.org/ontoeng/CW/StateChart02_PT#Receiver_4",
+			"type": "https://w3id.org/ontoeng/factory#SensorBarrierReceiver",
+			"position": [
+				0,
+				-19.8,
+				1.2000000000000002
+			],
+			"rotation": [
+				3.2310891488651735e-15,
+				3.141592653589793,
+				3.141592653589793
+			],
+			"placementRelTo": "https://w3id.org/ontoeng/CW/StateChart02_PT#DiffuseSensorBox_4",
+			"parentObject": "https://w3id.org/ontoeng/CW/StateChart02_PT#DiffuseSensorBox_4",
+			"representations": [
+				{
+					"file": "Sensor2.glb",
+					"unit": 1
+				}
+			]
+		},
+		{
+			"id": "https://w3id.org/ontoeng/CW/StateChart02_PT#Receiver_5",
+			"type": "https://w3id.org/ontoeng/factory#SensorBarrierReceiver",
+			"position": [
+				0,
+				-19.8,
+				1.2000000000000002
+			],
+			"rotation": [
+				3.2310891488651735e-15,
+				3.141592653589793,
+				3.141592653589793
+			],
+			"placementRelTo": "https://w3id.org/ontoeng/CW/StateChart02_PT#DiffuseSensorBox_5",
+			"parentObject": "https://w3id.org/ontoeng/CW/StateChart02_PT#DiffuseSensorBox_5",
+			"representations": [
+				{
+					"file": "Sensor2.glb",
+					"unit": 1
+				}
+			]
+		},
+		{
+			"id": "https://w3id.org/ontoeng/CW/StateChart02_PT#stopper2",
+			"type": "https://w3id.org/ontoeng/factory#Artifact",
+			"position": [
+				24,
+				23,
+				392
+			],
+			"rotation": [
+				0,
+				0,
+				1.5707963267949
+			],
+			"placementRelTo": "https://w3id.org/ontoeng/CW/StateChart02_PT#building",
+			"container": "https://w3id.org/ontoeng/CW/StateChart02_PT#building",
+			"representations": [
+				{
+					"file": "Stopper.glb",
+					"unit": 1
+				}
+			],
+			"properties": {
+				"MotionType": "ANIMATED",
+				"mass": 0,
+				"friction": 0.95,
+				"restitution": 0.1
+			}
+		},
+		{
+			"id": "https://w3id.org/ontoeng/CW/StateChart02_PT#PP.FloatingZ",
+			"type": "https://w3id.org/ontoeng/factory#RobotArm",
+			"placementRelTo": "https://w3id.org/ontoeng/CW/StateChart02_PT#PP.FloatingX",
+			"parentObject": "https://w3id.org/ontoeng/CW/StateChart02_PT#PP.FloatingX",
+			"representations": [
+				{
+					"file": "Pick_and_Place_Robot.glb#PP_Floating_Z",
+					"unit": 1
+				}
+			],
+			"position": [
+				-12,
+				8,
+				0
+			]
+		},
+		{
+			"id": "https://w3id.org/ontoeng/CW/StateChart02_PT#DiffuseSensorBox_1",
+			"type": "https://w3id.org/ontoeng/factory#SensorBarrier",
+			"position": [
+				41,
+				22,
+				378
+			],
+			"rotation": [
+				-1.5707963267948966,
+				-1.5900000547865225,
+				0
+			],
+			"placementRelTo": "https://w3id.org/ontoeng/CW/StateChart02_PT#building",
+			"container": "https://w3id.org/ontoeng/CW/StateChart02_PT#building",
+			"representations": [
+				{
+					"file": "Sensor.glb",
+					"unit": 1
+				}
+			],
+			"statechart": {
+				"id": "Sensor1_SC",
+				"context": {},
+				"states": {
+					"Detecting": {
+						"id": "Detecting",
+						"meta": {
+							"type": "https://w3id.org/ontoeng/factory#SensorDetecting"
+						},
+						"on": {
+							"OBJECT_REMOVED": [
+								{
+									"target": "#Idle"
+								}
+							]
+						},
+						"type": "atomic"
+					},
+					"Idle": {
+						"id": "Idle",
+						"meta": {
+							"type": "https://w3id.org/ontoeng/factory#SensorIdle"
+						},
+						"on": {
+							"OBJECT_DETECTED": [
+								{
+									"target": "#Detecting"
+								}
+							]
+						},
+						"type": "atomic"
+					}
+				},
+				"initial": "Idle"
+			}
+		},
+		{
+			"id": "https://w3id.org/ontoeng/CW/StateChart02_PT#DiffuseSensorBox_4",
+			"type": "https://w3id.org/ontoeng/factory#SensorBarrier",
+			"position": [
+				3.3100000000000005,
+				22,
+				267
+			],
+			"rotation": [
+				-1.5707963267948966,
+				1.5699999977275867,
+				0
+			],
+			"placementRelTo": "https://w3id.org/ontoeng/CW/StateChart02_PT#building",
+			"container": "https://w3id.org/ontoeng/CW/StateChart02_PT#building",
+			"representations": [
+				{
+					"file": "Sensor.glb",
+					"unit": 1
+				}
+			],
+			"statechart": {
+				"id": "Sensor4_SC",
+				"context": {},
+				"states": {
+					"Detecting_4": {
+						"id": "Detecting_4",
+						"meta": {
+							"type": "https://w3id.org/ontoeng/factory#SensorDetecting"
+						},
+						"on": {
+							"OBJECT_REMOVED_4": [
+								{
+									"target": "#Idle_4"
+								}
+							]
+						},
+						"type": "atomic"
+					},
+					"Idle_4": {
+						"id": "Idle_4",
+						"meta": {
+							"type": "https://w3id.org/ontoeng/factory#SensorIdle"
+						},
+						"on": {
+							"OBJECT_DETECTED_4": [
+								{
+									"target": "#Detecting_4"
+								}
+							]
+						},
+						"type": "atomic"
+					}
+				},
+				"initial": "Idle_4"
+			}
+		},
+		{
+			"id": "https://w3id.org/ontoeng/CW/StateChart02_PT#stop_2",
+			"type": "http://www.learninglab.de/~dolog/fsm/fsm.owl#Event"
+		},
+		{
+			"id": "https://w3id.org/ontoeng/CW/StateChart02_PT#B2",
+			"type": "https://w3id.org/ontoeng/factory#Conveyor",
+			"position": [
+				19.150000000000002,
+				0,
+				385
+			],
+			"rotation": [
+				0,
+				3.14159265358979,
+				0
+			],
+			"placementRelTo": "https://w3id.org/ontoeng/CW/StateChart02_PT#building",
+			"container": "https://w3id.org/ontoeng/CW/StateChart02_PT#building",
+			"representations": [
+				{
+					"file": "Conveyor.glb",
+					"unit": 1
+				}
+			],
+			"properties": {
+				"MotionType": "ANIMATED",
+				"friction": 0,
+				"restitution": 0.3,
+				"mass": 0
+			}
+		},
+		{
+			"id": "https://w3id.org/ontoeng/CW/StateChart02_PT#OBJECT_REMOVED",
+			"type": "http://www.learninglab.de/~dolog/fsm/fsm.owl#Event"
+		},
+		{
+			"id": "https://w3id.org/ontoeng/CW/StateChart02_PT#CommandBox.GreenButton",
+			"type": "https://w3id.org/ontoeng/factory#Artifact",
+			"parentObject": "https://w3id.org/ontoeng/CW/StateChart02_PT#CommandBox",
+			"representations": [
+				{
+					"file": "CommandBox.glb#GreenButton",
+					"unit": 1
+				}
+			]
+		},
+		{
+			"id": "https://w3id.org/ontoeng/CW/StateChart02_PT#CommandBox.EmergencyButton",
+			"type": "https://w3id.org/ontoeng/factory#Artifact",
+			"parentObject": "https://w3id.org/ontoeng/CW/StateChart02_PT#CommandBox",
+			"representations": [
+				{
+					"file": "CommandBox.glb#EmergencyButton",
+					"unit": 1
+				}
+			]
+		},
+		{
+			"id": "https://w3id.org/ontoeng/CW/StateChart02_PT#PP",
+			"type": "https://w3id.org/ontoeng/factory#Robot",
+			"position": [
+				20,
+				0,
+				400
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"placementRelTo": "https://w3id.org/ontoeng/CW/StateChart02_PT#building",
+			"container": "https://w3id.org/ontoeng/CW/StateChart02_PT#building",
+			"representations": [
+				{
+					"file": "Pick_and_Place_Robot.glb",
+					"unit": 1
+				}
+			],
+			"statechart": {
+				"id": "PP_SC",
+				"context": {},
+				"states": {
+					"pick": {
+						"id": "pick",
+						"meta": {
+							"type": "http://www.learninglab.de/~dolog/fsm/fsm.owl#Simple"
+						},
+						"on": {
+							"goRest": [
+								{
+									"target": "#rest"
+								}
+							],
+							"goPlace": [
+								{
+									"target": "#place"
+								}
+							]
+						},
+						"entry": [
+							{
+								"type": "ActionMoveTo",
+								"position": [
+									-0.6000000000000001,
+									-17.5,
+									-17.1
+								],
+								"target": "https://w3id.org/ontoeng/CW/StateChart02_PT#PP.FloatingY"
+							},
+							{
+								"type": "ActionMoveTo",
+								"target": "https://w3id.org/ontoeng/CW/StateChart02_PT#PP.Finger1",
+								"delay": 1500,
+								"position": [
+									0,
+									-3.8000000000000003,
+									0.30000000000000004
+								]
+							},
+							{
+								"type": "ActionMoveTo",
+								"position": [
+									0,
+									-3.8000000000000003,
+									-0.30000000000000004
+								],
+								"delay": 1500,
+								"target": "https://w3id.org/ontoeng/CW/StateChart02_PT#PP.Finger2"
+							},
+							{
+								"type": "ActionMoveTo",
+								"position": [
+									-12,
+									8,
+									0
+								],
+								"target": "https://w3id.org/ontoeng/CW/StateChart02_PT#PP.FloatingZ"
+							}
+						],
+						"type": "atomic"
+					},
+					"place": {
+						"id": "place",
+						"meta": {
+							"type": "http://www.learninglab.de/~dolog/fsm/fsm.owl#Simple"
+						},
+						"on": {
+							"goRest": [
+								{
+									"target": "#rest"
+								}
+							]
+						},
+						"entry": [
+							{
+								"type": "ActionMoveTo",
+								"delay": 1500,
+								"position": [
+									0,
+									-3.8000000000000003,
+									-3.8000000000000003
+								],
+								"target": "https://w3id.org/ontoeng/CW/StateChart02_PT#PP.Finger2"
+							},
+							{
+								"type": "ActionMoveTo",
+								"target": "https://w3id.org/ontoeng/CW/StateChart02_PT#PP.Finger1",
+								"position": [
+									0,
+									-3.8000000000000003,
+									3.8000000000000003
+								],
+								"delay": 1500
+							},
+							{
+								"type": "ActionMoveTo",
+								"position": [
+									-0.6000000000000001,
+									-4,
+									-17.1
+								],
+								"target": "https://w3id.org/ontoeng/CW/StateChart02_PT#PP.FloatingY"
+							},
+							{
+								"type": "ActionMoveTo",
+								"target": "https://w3id.org/ontoeng/CW/StateChart02_PT#PP.FloatingZ",
+								"position": [
+									-12,
+									8,
+									-20
+								]
+							}
+						],
+						"type": "atomic"
+					},
+					"rest": {
+						"id": "rest",
+						"meta": {
+							"type": "http://www.learninglab.de/~dolog/fsm/fsm.owl#Simple"
+						},
+						"on": {
+							"goPick": [
+								{
+									"target": "#pick"
+								}
+							]
+						},
+						"entry": [
+							{
+								"type": "ActionMoveTo",
+								"delay": 1000,
+								"position": [
+									0,
+									-3.8000000000000003,
+									-3.8000000000000003
+								],
+								"target": "https://w3id.org/ontoeng/CW/StateChart02_PT#PP.Finger2"
+							},
+							{
+								"type": "ActionMoveTo",
+								"target": "https://w3id.org/ontoeng/CW/StateChart02_PT#PP.FloatingZ",
+								"position": [
+									-12,
+									8,
+									0
+								]
+							},
+							{
+								"type": "ActionMoveTo",
+								"position": [
+									0,
+									-3.8000000000000003,
+									3.8000000000000003
+								],
+								"delay": 1000,
+								"target": "https://w3id.org/ontoeng/CW/StateChart02_PT#PP.Finger1"
+							},
+							{
+								"type": "ActionMoveTo",
+								"position": [
+									-0.6000000000000001,
+									-4,
+									-17.1
+								],
+								"target": "https://w3id.org/ontoeng/CW/StateChart02_PT#PP.FloatingY"
+							}
+						],
+						"type": "atomic"
+					}
+				},
+				"initial": "rest"
+			}
+		},
+		{
+			"id": "https://w3id.org/ontoeng/CW/StateChart02_PT#Controller",
+			"type": "https://w3id.org/ontoeng/factory#Actuator",
+			"statechart": {
+				"id": "Controller_SC",
+				"context": {},
+				"states": {
+					"control_idle": {
+						"id": "control_idle",
+						"meta": {
+							"type": "http://www.learninglab.de/~dolog/fsm/fsm.owl#Simple"
+						},
+						"on": {
+							"onGenBox": [
+								{
+									"target": "#genBox"
+								}
+							],
+							"onGenPart": [
+								{
+									"target": "#genPart"
+								}
+							]
+						},
+						"type": "atomic"
+					},
+					"genBox": {
+						"id": "genBox",
+						"meta": {
+							"type": "http://www.learninglab.de/~dolog/fsm/fsm.owl#Simple"
+						},
+						"entry": [
+							{
+								"type": "ActionGenerateAsset",
+								"target": "https://w3id.org/ontoeng/CW/StateChart02_PT#box",
+								"position": [
+									31.700000000000003,
+									23.400000000000002,
+									450
+								]
+							}
+						],
+						"after": {
+							"1000": {
+								"target": "#control_idle"
+							}
+						},
+						"type": "atomic"
+					},
+					"genPart": {
+						"id": "genPart",
+						"meta": {
+							"type": "http://www.learninglab.de/~dolog/fsm/fsm.owl#Simple"
+						},
+						"entry": [
+							{
+								"type": "ActionGenerateAsset",
+								"target": "https://w3id.org/ontoeng/CW/StateChart02_PT#part",
+								"position": [
+									12.9,
+									23.400000000000002,
+									250
+								]
+							}
+						],
+						"after": {
+							"300": {
+								"target": "#control_idle"
+							}
+						},
+						"type": "atomic"
+					}
+				},
+				"initial": "control_idle"
+			}
+		},
+		{
+			"id": "https://w3id.org/ontoeng/CW/StateChart02_PT#DiffuseSensorBox_2",
+			"type": "https://w3id.org/ontoeng/factory#SensorBarrier",
+			"position": [
+				41,
+				22,
+				362
+			],
+			"rotation": [
+				-1.5707963267948966,
+				-1.5900000547865225,
+				0
+			],
+			"placementRelTo": "https://w3id.org/ontoeng/CW/StateChart02_PT#building",
+			"container": "https://w3id.org/ontoeng/CW/StateChart02_PT#building",
+			"representations": [
+				{
+					"file": "Sensor.glb",
+					"unit": 1
+				}
+			],
+			"statechart": {
+				"id": "Sensor2_SC",
+				"context": {},
+				"states": {
+					"Detecting_2": {
+						"id": "Detecting_2",
+						"meta": {
+							"type": "https://w3id.org/ontoeng/factory#SensorDetecting"
+						},
+						"on": {
+							"OBJECT_REMOVED_2": [
+								{
+									"target": "#Idle_2"
+								}
+							]
+						},
+						"type": "atomic"
+					},
+					"Idle_2": {
+						"id": "Idle_2",
+						"meta": {
+							"type": "https://w3id.org/ontoeng/factory#SensorIdle"
+						},
+						"on": {
+							"OBJECT_DETECTED_2": [
+								{
+									"target": "#Detecting_2"
+								}
+							]
+						},
+						"type": "atomic"
+					}
+				},
+				"initial": "Idle_2"
+			}
+		},
+		{
+			"id": "https://w3id.org/ontoeng/CW/StateChart02_PT#PP.FloatingX",
+			"type": "https://w3id.org/ontoeng/factory#RobotArm",
+			"placementRelTo": "https://w3id.org/ontoeng/CW/StateChart02_PT#PP",
+			"parentObject": "https://w3id.org/ontoeng/CW/StateChart02_PT#PP",
+			"representations": [
+				{
+					"file": "Pick_and_Place_Robot.glb#PP_Floating_X",
+					"unit": 1
+				}
+			]
+		},
+		{
+			"id": "https://w3id.org/ontoeng/CW/StateChart02_PT#Slide1",
+			"type": "https://w3id.org/ontoeng/factory#Conveyor",
+			"position": [
+				41,
+				22,
+				260
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"placementRelTo": "https://w3id.org/ontoeng/CW/StateChart02_PT#building",
+			"container": "https://w3id.org/ontoeng/CW/StateChart02_PT#building",
+			"representations": [
+				{
+					"file": "Slide.glb",
+					"unit": 1
+				}
+			],
+			"properties": {
+				"MotionType": "ANIMATED",
+				"friction": 0,
+				"ShapeType": "MESH",
+				"mass": 0,
+				"restitution": 0.3
+			},
+			"statechart": {
+				"id": "Slide1_SC",
+				"context": {},
+				"states": {
+					"forward_2": {
+						"id": "forward_2",
+						"meta": {
+							"type": "http://www.learninglab.de/~dolog/fsm/fsm.owl#Simple"
+						},
+						"on": {
+							"stop": [
+								{
+									"target": "#idle_2"
+								}
+							]
+						},
+						"entry": [
+							{
+								"type": "ActionSurfaceVelocity",
+								"velocity": [
+									0,
+									0,
+									-3
+								],
+								"target": "https://w3id.org/ontoeng/CW/StateChart02_PT#Slide1"
+							}
+						],
+						"type": "atomic"
+					},
+					"idle_2": {
+						"id": "idle_2",
+						"meta": {
+							"type": "http://www.learninglab.de/~dolog/fsm/fsm.owl#Simple"
+						},
+						"on": {
+							"start": [
+								{
+									"target": "#forward_2"
+								}
+							]
+						},
+						"entry": [
+							{
+								"type": "ActionSurfaceVelocity",
+								"velocity": [
+									0,
+									0,
+									0
+								],
+								"target": "https://w3id.org/ontoeng/CW/StateChart02_PT#Slide1"
+							}
+						],
+						"type": "atomic"
+					}
+				},
+				"initial": "idle_2"
+			}
+		},
+		{
+			"id": "https://w3id.org/ontoeng/CW/StateChart02_PT#switchOnGreen",
+			"type": "http://www.learninglab.de/~dolog/fsm/fsm.owl#Event"
+		},
+		{
+			"id": "https://w3id.org/ontoeng/CW/StateChart02_PT#Receiver_6",
+			"type": "https://w3id.org/ontoeng/factory#SensorBarrierReceiver",
+			"position": [
+				0,
+				-19.8,
+				1.2000000000000002
+			],
+			"rotation": [
+				3.2310891488651735e-15,
+				3.141592653589793,
+				3.141592653589793
+			],
+			"placementRelTo": "https://w3id.org/ontoeng/CW/StateChart02_PT#DiffuseSensorBox_6",
+			"parentObject": "https://w3id.org/ontoeng/CW/StateChart02_PT#DiffuseSensorBox_6",
+			"representations": [
+				{
+					"file": "Sensor2.glb",
+					"unit": 1
+				}
+			]
+		},
+		{
+			"id": "https://w3id.org/ontoeng/CW/StateChart02_PT#onGenPart",
+			"type": "http://www.learninglab.de/~dolog/fsm/fsm.owl#Event"
+		},
+		{
+			"id": "https://w3id.org/ontoeng/CW/StateChart02_PT#PP.Finger2",
+			"type": "https://w3id.org/ontoeng/factory#JawFinger",
+			"placementRelTo": "https://w3id.org/ontoeng/CW/StateChart02_PT#PP.Gripper",
+			"parentObject": "https://w3id.org/ontoeng/CW/StateChart02_PT#PP.Gripper",
+			"representations": [
+				{
+					"file": "Pick_and_Place_Robot.glb#PP_Finger2",
+					"unit": 1
+				}
+			],
+			"properties": {
+				"MotionType": "ANIMATED",
+				"friction": 0,
+				"restitution": 0,
+				"mass": 0
+			},
+			"position": [
+				-0.000006326972368242423,
+				-3.7999995052814484,
+				-3.799999877810478
+			],
+			"rotation": [
+				0,
+				-1.1852223025243789e-7,
+				0
+			]
+		},
+		{
+			"id": "https://w3id.org/ontoeng/CW/StateChart02_PT#OBJECT_DETECTED",
+			"type": "http://www.learninglab.de/~dolog/fsm/fsm.owl#Event"
+		},
+		{
+			"id": "ground",
+			"type": ""
+		}
+	]
+}

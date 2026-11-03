@@ -1,0 +1,944 @@
+{
+  "context":  {
+     "UnitOfMeasureScale":  0.001,
+    "Zup":  false,
+     "RepoPath":  ""
+  },
+  "scene":  [
+    "building",
+    "B1",
+    "part_01",
+    "part_02",
+    "part_03",
+    "part_04",
+    "part_05",
+    "part_06",
+    "part_07",
+    "part_08",
+    "part_09",
+    "part_10",
+    "Grid",
+    "Box",
+    "WSA",
+    "WSA.base",
+    "WSA.link1",
+    "WSA.link2",
+    "WSA.link3",
+    "WSA.link4",
+    "WSA.link5",
+    "WSA.link6",
+    "WSA.EndEffector",
+    "WSA.Gripper1",
+    "WSA.Gripper2",
+    "WSA.Workholding",
+    "WSA.Conveyor",
+    "WSA.PalletPosition",
+    "WSA.Robot",
+    "WSB",
+    "WSB.base",
+    "WSB.link1",
+    "WSB.link2",
+    "WSB.link3",
+    "WSB.link4",
+    "WSB.link5",
+    "WSB.link6",
+    "WSB.EndEffector",
+    "WSB.Gripper1",
+    "WSB.Gripper2",
+    "WSB.Workholding",
+    "WSB.Conveyor",
+    "WSB.PalletPosition",
+    "WSB.Robot",
+    "Sensor1"
+  ],
+   "assets":  [
+    {
+      "id":  "building",
+      "type": "https://standards.buildingsmart.org/IFC/DEV/IFC4/ADD1/OWL#IfcBuilding"
+    },
+    {
+      "id":  "B1",
+      "type": "https://w3id.org/ontoeng/factory#Conveyor",
+      "representations": [
+        {
+          "file": "ConveyorNew.glb",
+          "unit": 1
+        }
+      ],
+      "position": [0, 0, 0],
+      "rotation": [0, 0, 0],
+      "placementRelTo": "building",
+      "properties": {
+        "mass":  0,
+          "restitution":  0.3,
+         "friction":  0.0,
+         "MotionType":  "ANIMATED"
+      },
+      "statechart": {
+                         "id":  "B1_SC",
+                         "initial":  "idle",
+                         "states":  {
+                               "idle":  {
+                                     "on":  {
+                                           "B1startF":  "forward",
+                            "B1startB":  "backward"                         
+            },
+                                     "entry":  {
+                                           "action":  "surfaceVelocity",
+                                           "target":  "B1",
+                                           "velocity":  [0, 0, 0]                         
+            }                     
+          },
+                               "forward":  {
+                                     "on":  {
+                                           "B1stop":  "idle"                         
+            },
+                                     "entry":  {
+                                           "action":  "surfaceVelocity",
+                                           "target":  "B1",
+                                           "velocity":  [0, 0, 80]                         
+            }                     
+          },
+                               "backward":  {
+                                     "on":  {
+                                           "B1stop":  "idle"                         
+            },
+                                     "entry":  {
+                                           "action":  "surfaceVelocity",
+                                           "target":  "B1",
+                                           "velocity":  [0, 0, -80]                         
+            }                     
+          }                 
+        }             
+      }
+    },
+    {
+      "id":  "part_01",
+      "type": "https://w3id.org/ontoeng/factory#Artifact",
+      "representations": [
+        {
+          "file": "Part.glb",
+          "unit": 1
+        }
+      ],
+      "position": [0, 230, -900],
+      "rotation": [0, 0, 0],
+      "placementRelTo": "building",
+      "properties": {
+        "mass":  1,
+         "restitution":  0.1,
+         "friction":  0.95
+      }
+    },
+    {
+      "id":  "part_02",
+      "type": "https://w3id.org/ontoeng/factory#Artifact",
+      "representations": [
+        {
+          "file": "Part.glb",
+          "unit": 1
+        }
+      ],
+      "position": [0, 230, -700],
+      "rotation": [0, 0, 0],
+      "placementRelTo": "building",
+      "properties": {
+        "mass":  1,
+         "restitution":  0.1,
+         "friction":  0.95
+      }
+    },
+    {
+      "id":  "part_03",
+      "type": "https://w3id.org/ontoeng/factory#Artifact",
+      "representations": [
+        {
+          "file": "Part.glb",
+          "unit": 1
+        }
+      ],
+      "position": [0, 230, -500],
+      "rotation": [0, 0, 0],
+      "placementRelTo": "building",
+      "properties": {
+        "mass":  1,
+         "restitution":  0.1,
+         "friction":  0.95
+      }
+    },
+    {
+      "id":  "part_04",
+      "type": "https://w3id.org/ontoeng/factory#Artifact",
+      "representations": [
+        {
+          "file": "Part.glb",
+          "unit": 1
+        }
+      ],
+      "position": [0, 230, -300],
+      "rotation": [0, 0, 0],
+      "placementRelTo": "building",
+      "properties": {
+        "mass":  1,
+         "restitution":  0.1,
+         "friction":  0.96
+      }
+    },
+    {
+      "id":  "part_05",
+      "type": "https://w3id.org/ontoeng/factory#Artifact",
+      "representations": [
+        {
+          "file": "Part.glb",
+          "unit": 1
+        }
+      ],
+      "position": [0, 230, -100],
+      "rotation": [0, 0, 0],
+      "placementRelTo": "building",
+      "properties": {
+        "mass":  1,
+         "restitution":  0.1,
+         "friction":  0.97
+      }
+    },
+    {
+      "id":  "part_06",
+      "type": "https://w3id.org/ontoeng/factory#Artifact",
+      "representations": [
+        {
+          "file": "Part.glb",
+          "unit": 1
+        }
+      ],
+      "position": [0, 230, 100],
+      "rotation": [0, 0, 0],
+      "placementRelTo": "building",
+      "properties": {
+        "mass":  1,
+         "restitution":  0.1,
+         "friction":  0.98
+      }
+    },
+    {
+      "id":  "part_07",
+      "type": "https://w3id.org/ontoeng/factory#Artifact",
+      "representations": [
+        {
+          "file": "Part.glb",
+          "unit": 1
+        }
+      ],
+      "position": [0, 230, 300],
+      "rotation": [0, 0, 0],
+      "placementRelTo": "building",
+      "properties": {
+        "mass":  1,
+         "restitution":  0.1,
+         "friction":  0.99
+      }
+    },
+    {
+      "id":  "part_08",
+      "type": "https://w3id.org/ontoeng/factory#Artifact",
+      "representations": [
+        {
+          "file": "Part.glb",
+          "unit": 1
+        }
+      ],
+      "position": [0, 230, 500],
+      "rotation": [0, 0, 0],
+      "placementRelTo": "building",
+      "properties": {
+        "mass":  1,
+         "restitution":  0.1,
+         "friction":  0.100
+      }
+    },
+    {
+      "id":  "part_09",
+      "type": "https://w3id.org/ontoeng/factory#Artifact",
+      "representations": [
+        {
+          "file": "Part.glb",
+          "unit": 1
+        }
+      ],
+      "position": [0, 230, 700],
+      "rotation": [0, 0, 0],
+      "placementRelTo": "building",
+      "properties": {
+        "mass":  1,
+         "restitution":  0.1,
+         "friction":  0.101
+      }
+    },
+    {
+      "id":  "part_10",
+      "type": "https://w3id.org/ontoeng/factory#Artifact",
+      "representations": [
+        {
+          "file": "Part.glb",
+          "unit": 1
+        }
+      ],
+      "position": [0, 230, 900],
+      "rotation": [0, 0, 0],
+      "placementRelTo": "building",
+      "properties": {
+        "mass":  1,
+         "restitution":  0.1,
+         "friction":  0.95
+      }
+    },
+    {
+      "id":  "Grid",
+      "type": "https://w3id.org/ontoeng/factory#Artifact",
+      "representations": [
+        {
+          "file": "Grid.glb",
+          "unit": 1
+        }
+      ],
+      "position": [2200, 540, -2600],
+      "rotation": [0, -1.5707963267949, -1.5707963267949],
+      "placementRelTo": "building",
+      "properties": {
+        "mass":  0,
+          "restitution":  0.3,
+         "friction":  0.0,
+         "MotionType":  "ANIMATED"
+      }
+    },
+    {
+      "id":  "Box",
+      "type": "https://w3id.org/ontoeng/factory#Artifact",
+      "representations": [
+        {
+          "file": "Box_large.glb",
+          "unit": 1
+        }
+      ],
+      "position": [2200, 0, -3000],
+      "rotation": [0, -1.5707963267949, 0],
+      "placementRelTo": "building",
+      "properties": {
+        "mass":  0,
+          "restitution":  0.3,
+         "friction":  0.0,
+         "MotionType":  "ANIMATED"
+      }
+    },
+            {
+            "id": "WSA",
+            "type": "https://w3id.org/ontoeng/factory#MachineTool",
+            "representations": [
+                {
+                    "file": "UR_Pick_and_Place_Station.glb",
+                    "unit": 1
+                }
+            ],
+            "position": [
+                -550,
+                0,
+                964
+            ],
+            "rotation": [0, 3.1415926536, 0],
+            "placementRelTo": "building"
+        },
+        {
+            "id": "WSA.base",
+            "type": "https://standards.buildingsmart.org/IFC/DEV/IFC4/ADD1/OWL#IfcElementAssembly",
+            "representations": [
+                {
+                    "file": "UR_Pick_and_Place_Station.glb#URbase",
+                    "unit": 1
+                }
+            ],
+            "position": [
+                0,
+                0,
+                0
+            ],
+            "placementRelTo": "WSA.Robot",
+            "parentObject": "WSA.Robot"
+        },
+        {
+            "id": "WSA.link1",
+            "type": "https://standards.buildingsmart.org/IFC/DEV/IFC4/ADD1/OWL#IfcElementAssembly",
+            "representations": [
+                {
+                    "file": "UR_Pick_and_Place_Station.glb#URjoint1",
+                    "unit": 1
+                }
+            ],
+            "position": [
+                0,
+                86.05,
+                0
+            ],
+            "rotation": [
+                0,
+                0.84055,
+                0
+            ],
+            "placementRelTo": "WSA.base",
+            "parentObject": "WSA.base"
+        },
+        {
+            "id": "WSA.link2",
+            "type": "https://standards.buildingsmart.org/IFC/DEV/IFC4/ADD1/OWL#IfcElementAssembly",
+            "representations": [
+                {
+                    "file": "UR_Pick_and_Place_Station.glb#URjoint2",
+                    "unit": 1
+                }
+            ],
+            "position": [
+                0,
+                65.85,
+                54
+            ],
+            "rotation": [
+                0,
+                0,
+                -0.5
+            ],
+            "placementRelTo": "WSA.link1",
+            "parentObject": "WSA.link1"
+        },
+        {
+            "id": "WSA.link3",
+            "type": "https://standards.buildingsmart.org/IFC/DEV/IFC4/ADD1/OWL#IfcElementAssembly",
+            "representations": [
+                {
+                    "file": "UR_Pick_and_Place_Station.glb#URjoint3",
+                    "unit": 1
+                }
+            ],
+            "position": [
+                0,
+                243.65,
+                23.6
+            ],
+            "rotation": [
+                0,
+                0,
+                2.045
+            ],
+            "placementRelTo": "WSA.link2",
+            "parentObject": "WSA.link2"
+        },
+        {
+            "id": "WSA.link4",
+            "type": "https://standards.buildingsmart.org/IFC/DEV/IFC4/ADD1/OWL#IfcElementAssembly",
+            "representations": [
+                {
+                    "file": "UR_Pick_and_Place_Station.glb#URjoint4",
+                    "unit": 1
+                }
+            ],
+            "position": [
+                0,
+                213,
+                -8
+            ],
+            "rotation": [
+                0,
+                0,
+                1.44
+            ],
+            "placementRelTo": "WSA.link3",
+            "parentObject": "WSA.link3"
+        },
+        {
+            "id": "WSA.link5",
+            "type": "https://standards.buildingsmart.org/IFC/DEV/IFC4/ADD1/OWL#IfcElementAssembly",
+            "representations": [
+                {
+                    "file": "UR_Pick_and_Place_Station.glb#URjoint5",
+                    "unit": 1
+                }
+            ],
+            "position": [
+                0,
+                42.6,
+                40.8
+            ],
+            "rotation": [
+                0,
+                0.86,
+                0
+            ],
+            "placementRelTo": "WSA.link4",
+            "parentObject": "WSA.link4"
+        },
+        {
+            "id": "WSA.link6",
+            "type": "https://standards.buildingsmart.org/IFC/DEV/IFC4/ADD1/OWL#IfcElementAssembly",
+            "representations": [
+                {
+                    "file": "UR_Pick_and_Place_Station.glb#URjoint6",
+                    "unit": 1
+                }
+            ],
+            "position": [
+                0,
+                40.8,
+                42.6
+            ],
+            "rotation": [
+                0,
+                0,
+                1.511
+            ],
+            "placementRelTo": "WSA.link5",
+            "parentObject": "WSA.link5"
+        },
+        {
+            "id": "WSA.EndEffector",
+            "type": "https://standards.buildingsmart.org/IFC/DEV/IFC4/ADD1/OWL#IfcElementAssembly",
+            "representations": [
+                {
+                    "file": "UR_Pick_and_Place_Station.glb#UREndEffector",
+                    "unit": 1
+                }
+            ],
+            "position": [
+                0,
+                0,
+                38
+            ],
+            "placementRelTo": "WSA.link6",
+            "parentObject": "WSA.link6"
+        },
+        {
+            "id": "WSA.Gripper1",
+            "type": "https://standards.buildingsmart.org/IFC/DEV/IFC4/ADD1/OWL#IfcElementAssembly",
+            "representations": [
+                {
+                    "file": "UR_Pick_and_Place_Station.glb#URgripper1",
+                    "unit": 1
+                }
+            ],
+            "position": [
+                0,
+                -12.7,
+                40
+            ],
+            "placementRelTo": "WSA.EndEffector",
+            "parentObject": "WSA.EndEffector"
+        },
+        {
+            "id": "WSA.Gripper2",
+            "type": "https://standards.buildingsmart.org/IFC/DEV/IFC4/ADD1/OWL#IfcElementAssembly",
+            "representations": [
+                {
+                    "file": "UR_Pick_and_Place_Station.glb#URgripper2",
+                    "unit": 1
+                }
+            ],
+            "position": [
+                0,
+                14.3,
+                40
+            ],
+            "placementRelTo": "WSA.EndEffector",
+            "parentObject": "WSA.EndEffector"
+        },
+        {
+            "id": "WSA.Workholding",
+            "type": "https://w3id.org/ontoeng/factory#WorkholdingPosition",
+            "position": [
+                -5.85,
+                2,
+                98
+            ],
+            "rotation": [
+                0.0414936,
+                -3.0725331,
+                1.5736656
+            ],
+            "placementRelTo": "WSA.EndEffector",
+            "parentObject": "WSA.EndEffector"
+        },
+        {
+            "id": "WSA.Conveyor",
+            "type": "https://w3id.org/ontoeng/factory#Conveyor",
+            "representations": [
+                {
+                    "file": "UR_Pick_and_Place_Station.glb#Conveyor_Main",
+                    "unit": 1
+                }
+            ],
+            "position": [
+                0,
+                0,
+                0
+            ],
+            "placementRelTo": "WSA",
+            "parentObject": "WSA"
+        },
+        {
+            "id": "WSA.PalletPosition",
+            "type": "https://w3id.org/ontoeng/factory#PalletPosition",
+            "position": [
+                0,
+                230,
+                -55.55
+            ],
+            "placementRelTo": "WSA.Conveyor",
+            "parentObject": "WSA.Conveyor"
+        },
+        {
+            "id": "WSA.Robot",
+            "type": "https://w3id.org/ontoeng/factory#Robot",
+            "representations": [
+                {
+                    "file": "UR_Pick_and_Place_Station.glb#URPPs_Robot",
+                    "unit": 1
+                }
+            ],
+            "position": [
+                -330,
+                0,
+                12.5
+            ],
+            "placementRelTo": "WSA",
+            "parentObject": "WSA"
+        },
+         {
+            "id": "WSB",
+            "type": "https://w3id.org/ontoeng/factory#MachineTool",
+            "representations": [
+                {
+                    "file": "UR_Pick_and_Place_Station.glb",
+                    "unit": 1
+                }
+            ],
+            "position": [
+                2660, 0, -3300
+            ],
+            "placementRelTo": "building"
+        },
+        {
+            "id": "WSB.base",
+            "type": "https://standards.buildingsmart.org/IFC/DEV/IFC4/ADD1/OWL#IfcElementAssembly",
+            "representations": [
+                {
+                    "file": "UR_Pick_and_Place_Station.glb#URbase",
+                    "unit": 1
+                }
+            ],
+            "position": [
+                0,
+                0,
+                0
+            ],
+            "placementRelTo": "WSB.Robot",
+            "parentObject": "WSB.Robot"
+        },
+        {
+            "id": "WSB.link1",
+            "type": "https://standards.buildingsmart.org/IFC/DEV/IFC4/ADD1/OWL#IfcElementAssembly",
+            "representations": [
+                {
+                    "file": "UR_Pick_and_Place_Station.glb#URjoint1",
+                    "unit": 1
+                }
+            ],
+            "position": [
+                0,
+                86.05,
+                0
+            ],
+            "rotation": [
+                0,
+                0.84055,
+                0
+            ],
+            "placementRelTo": "WSB.base",
+            "parentObject": "WSB.base"
+        },
+        {
+            "id": "WSB.link2",
+            "type": "https://standards.buildingsmart.org/IFC/DEV/IFC4/ADD1/OWL#IfcElementAssembly",
+            "representations": [
+                {
+                    "file": "UR_Pick_and_Place_Station.glb#URjoint2",
+                    "unit": 1
+                }
+            ],
+            "position": [
+                0,
+                65.85,
+                54
+            ],
+            "rotation": [
+                0,
+                0,
+                -0.5
+            ],
+            "placementRelTo": "WSB.link1",
+            "parentObject": "WSB.link1"
+        },
+        {
+            "id": "WSB.link3",
+            "type": "https://standards.buildingsmart.org/IFC/DEV/IFC4/ADD1/OWL#IfcElementAssembly",
+            "representations": [
+                {
+                    "file": "UR_Pick_and_Place_Station.glb#URjoint3",
+                    "unit": 1
+                }
+            ],
+            "position": [
+                0,
+                243.65,
+                23.6
+            ],
+            "rotation": [
+                0,
+                0,
+                2.045
+            ],
+            "placementRelTo": "WSB.link2",
+            "parentObject": "WSB.link2"
+        },
+        {
+            "id": "WSB.link4",
+            "type": "https://standards.buildingsmart.org/IFC/DEV/IFC4/ADD1/OWL#IfcElementAssembly",
+            "representations": [
+                {
+                    "file": "UR_Pick_and_Place_Station.glb#URjoint4",
+                    "unit": 1
+                }
+            ],
+            "position": [
+                0,
+                213,
+                -8
+            ],
+            "rotation": [
+                0,
+                0,
+                1.44
+            ],
+            "placementRelTo": "WSB.link3",
+            "parentObject": "WSB.link3"
+        },
+        {
+            "id": "WSB.link5",
+            "type": "https://standards.buildingsmart.org/IFC/DEV/IFC4/ADD1/OWL#IfcElementAssembly",
+            "representations": [
+                {
+                    "file": "UR_Pick_and_Place_Station.glb#URjoint5",
+                    "unit": 1
+                }
+            ],
+            "position": [
+                0,
+                42.6,
+                40.8
+            ],
+            "rotation": [
+                0,
+                0.86,
+                0
+            ],
+            "placementRelTo": "WSB.link4",
+            "parentObject": "WSB.link4"
+        },
+        {
+            "id": "WSB.link6",
+            "type": "https://standards.buildingsmart.org/IFC/DEV/IFC4/ADD1/OWL#IfcElementAssembly",
+            "representations": [
+                {
+                    "file": "UR_Pick_and_Place_Station.glb#URjoint6",
+                    "unit": 1
+                }
+            ],
+            "position": [
+                0,
+                40.8,
+                42.6
+            ],
+            "rotation": [
+                0,
+                0,
+                1.511
+            ],
+            "placementRelTo": "WSB.link5",
+            "parentObject": "WSB.link5"
+        },
+        {
+            "id": "WSB.EndEffector",
+            "type": "https://standards.buildingsmart.org/IFC/DEV/IFC4/ADD1/OWL#IfcElementAssembly",
+            "representations": [
+                {
+                    "file": "UR_Pick_and_Place_Station.glb#UREndEffector",
+                    "unit": 1
+                }
+            ],
+            "position": [
+                0,
+                0,
+                38
+            ],
+            "placementRelTo": "WSB.link6",
+            "parentObject": "WSB.link6"
+        },
+        {
+            "id": "WSB.Gripper1",
+            "type": "https://standards.buildingsmart.org/IFC/DEV/IFC4/ADD1/OWL#IfcElementAssembly",
+            "representations": [
+                {
+                    "file": "UR_Pick_and_Place_Station.glb#URgripper1",
+                    "unit": 1
+                }
+            ],
+            "position": [
+                0,
+                -12.7,
+                40
+            ],
+            "placementRelTo": "WSB.EndEffector",
+            "parentObject": "WSB.EndEffector"
+        },
+        {
+            "id": "WSB.Gripper2",
+            "type": "https://standards.buildingsmart.org/IFC/DEV/IFC4/ADD1/OWL#IfcElementAssembly",
+            "representations": [
+                {
+                    "file": "UR_Pick_and_Place_Station.glb#URgripper2",
+                    "unit": 1
+                }
+            ],
+            "position": [
+                0,
+                14.3,
+                40
+            ],
+            "placementRelTo": "WSB.EndEffector",
+            "parentObject": "WSB.EndEffector"
+        },
+        {
+            "id": "WSB.Workholding",
+            "type": "https://w3id.org/ontoeng/factory#WorkholdingPosition",
+            "position": [
+                -5.85,
+                2,
+                98
+            ],
+            "rotation": [
+                0.0414936,
+                -3.0725331,
+                1.5736656
+            ],
+            "placementRelTo": "WSB.EndEffector",
+            "parentObject": "WSB.EndEffector"
+        },
+        {
+            "id": "WSB.Conveyor",
+            "type": "https://w3id.org/ontoeng/factory#Conveyor",
+            "representations": [
+                {
+                    "file": "UR_Pick_and_Place_Station.glb#Conveyor_Main",
+                    "unit": 1
+                }
+            ],
+            "position": [
+                0,
+                0,
+                0
+            ],
+            "placementRelTo": "WSB",
+            "parentObject": "WSB"
+        },
+        {
+            "id": "WSB.PalletPosition",
+            "type": "https://w3id.org/ontoeng/factory#PalletPosition",
+            "position": [
+                0,
+                230,
+                -55.55
+            ],
+            "placementRelTo": "WSB.Conveyor",
+            "parentObject": "WSB.Conveyor"
+        },
+        {
+            "id": "WSB.Robot",
+            "type": "https://w3id.org/ontoeng/factory#Robot",
+            "representations": [
+                {
+                    "file": "UR_Pick_and_Place_Station.glb#URPPs_Robot",
+                    "unit": 1
+                }
+            ],
+            "position": [
+                -330,
+                0,
+                12.5
+            ],
+            "placementRelTo": "WSB",
+            "parentObject": "WSB"
+        },
+        {
+			"id": "Sensor1",
+			"type": "https://w3id.org/ontoeng/factory#SensorBarrier",
+			"position": [
+				41,
+				22,
+				378
+			],
+			"rotation": [
+				-1.5707963267948966,
+				-1.5900000547865225,
+				0
+			],
+			"placementRelTo": "B1",
+			"container": "https://w3id.org/ontoeng/CW/StateChart02_PT#building",
+			"representations": [
+				{
+					"file": "Sensor.glb",
+					"unit": 1
+				}
+			],
+			"statechart": {
+				"id": "Sensor1_SC",
+				"context": {},
+				"states": {
+					"Detecting": {
+						"id": "Detecting",
+						"meta": {
+							"type": "https://w3id.org/ontoeng/factory#SensorDetecting"
+						},
+						"on": {
+							"OBJECT_REMOVED": [
+								{
+									"target": "#Idle"
+								}
+							]
+						},
+						"type": "atomic"
+					},
+					"Idle": {
+						"id": "Idle",
+						"meta": {
+							"type": "https://w3id.org/ontoeng/factory#SensorIdle"
+						},
+						"on": {
+							"OBJECT_DETECTED": [
+								{
+									"target": "#Detecting"
+								}
+							]
+						},
+						"type": "atomic"
+					}
+				},
+				"initial": "Idle"
+			}
+		}
+  ]
+}
