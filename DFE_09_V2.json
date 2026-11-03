@@ -114,6 +114,91 @@
       }
     },
     {
+			"id": "Sensor1",
+			"type": "https://w3id.org/ontoeng/factory#SensorBarrier",
+			"position": [
+				110,
+				230,
+				930
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"placementRelTo": "B1",
+			"container": "building",
+			"representations": [
+				{
+					"file": "Sensor.glb",
+					"unit": 1
+				}
+			],
+			"statechart": {
+				"id": "Sensor1_SC",
+				"context": {},
+				"states": {
+					"Detecting": {
+						"id": "Detecting",
+						"meta": {
+							"type": "https://w3id.org/ontoeng/factory#SensorDetecting"
+						},
+						"on": {
+							"OBJECT_REMOVED": [
+								{
+									"target": "#Idle"
+								}
+							]
+						},
+                        "entry": {
+                                "action": "sendEvent",
+                                "to": "B1_SC",
+                                "target": "B1stop"
+                            },
+						"type": "atomic"
+					},
+					"Idle": {
+						"id": "Idle",
+						"meta": {
+							"type": "https://w3id.org/ontoeng/factory#SensorIdle"
+						},
+						"on": {
+							"OBJECT_DETECTED": [
+								{
+									"target": "#Detecting"
+								}
+							]
+						},
+						"type": "atomic"
+					}
+				},
+				"initial": "Idle"
+			}
+		},
+    {
+			"id": "Receiver1",
+			"type": "https://w3id.org/ontoeng/factory#SensorBarrierReceiver",
+			"position": [
+				-220,
+				0,
+				0
+			],
+			"rotation": [
+				0,
+				3.1416,
+				0
+			],
+			"placementRelTo": "Sensor1",
+			"parentObject": "Sensor1",
+            "container": "building",
+			"representations": [
+				{
+					"file": "Sensor2.glb",
+					"unit": 1
+				}
+			]
+		},
+    {
       "id":  "part_01",
       "type": "https://w3id.org/ontoeng/factory#Artifact",
       "representations": [
@@ -883,86 +968,6 @@
             ],
             "placementRelTo": "WSB",
             "parentObject": "WSB"
-        },
-        {
-			"id": "Sensor1",
-			"type": "https://w3id.org/ontoeng/factory#SensorBarrier",
-			"position": [
-				110,
-				230,
-				960
-			],
-			"rotation": [
-				0,
-				0,
-				0
-			],
-			"placementRelTo": "B1",
-			"container": "building",
-			"representations": [
-				{
-					"file": "Sensor.glb",
-					"unit": 1
-				}
-			],
-			"statechart": {
-				"id": "Sensor1_SC",
-				"context": {},
-				"states": {
-					"Detecting": {
-						"id": "Detecting",
-						"meta": {
-							"type": "https://w3id.org/ontoeng/factory#SensorDetecting"
-						},
-						"on": {
-							"OBJECT_REMOVED": [
-								{
-									"target": "#Idle"
-								}
-							]
-						},
-						"type": "atomic"
-					},
-					"Idle": {
-						"id": "Idle",
-						"meta": {
-							"type": "https://w3id.org/ontoeng/factory#SensorIdle"
-						},
-						"on": {
-							"OBJECT_DETECTED": [
-								{
-									"target": "#Detecting"
-								}
-							]
-						},
-						"type": "atomic"
-					}
-				},
-				"initial": "Idle"
-			}
-		},
-        {
-			"id": "Receiver1",
-			"type": "https://w3id.org/ontoeng/factory#SensorBarrierReceiver",
-			"position": [
-				-220,
-				0,
-				0
-			],
-			"rotation": [
-				0,
-				3.1416,
-				0
-			],
-			"placementRelTo": "Sensor1",
-			"parentObject": "Sensor1",
-            "container": "building",
-			"representations": [
-				{
-					"file": "Sensor2.glb",
-					"unit": 1
-				}
-			]
-		}
+        }
   ]
 }
