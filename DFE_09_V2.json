@@ -50,7 +50,8 @@
     "WSB.PalletPosition",
     "WSB.Robot",
     "Sensor1",
-    "Receiver1"
+    "Receiver1",
+    "AGV"
   ],
   "assets": [
     {
