@@ -888,9 +888,9 @@
 			"id": "Sensor1",
 			"type": "https://w3id.org/ontoeng/factory#SensorBarrier",
 			"position": [
-				0,
-				230,
-				964
+				0.094,
+				0.219,
+				0.9
 			],
 			"rotation": [
 				0,
@@ -947,7 +947,7 @@
 			"position": [
 				0,
 				0,
-				100
+				0
 			],
 			"rotation": [
 				0,
@@ -956,6 +956,7 @@
 			],
 			"placementRelTo": "Sensor1",
 			"parentObject": "Sensor1",
+            "container": "building",
 			"representations": [
 				{
 					"file": "Sensor2.glb",
