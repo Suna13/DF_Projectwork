@@ -413,7 +413,7 @@
           "unit": 1
         }
       ],
-      "position": [-550, 0, 964],
+      "position": [-220, 0, 951],
       "rotation": [0, 3.1415926536, 0],
       "placementRelTo": "building"
     },
@@ -516,7 +516,7 @@
     },
     {
       "id": "WSA.EndEffector",
-      "type": "https://standards.buildingsmart.org/IFC/DEV/IFC4/ADD1/OWL#IfcElementAssembly",
+      "type": "https://w3id.org/ontoeng/factory#JawGripper",
       "representations": [
         {
           "file": "UR.glb#UREndEffector",
@@ -529,26 +529,36 @@
     },
     {
       "id": "WSA.Gripper1",
-      "type": "https://standards.buildingsmart.org/IFC/DEV/IFC4/ADD1/OWL#IfcElementAssembly",
+      "type": "https://w3id.org/ontoeng/factory#JawFinger",
       "representations": [
         {
           "file": "UR.glb#URgripper1",
           "unit": 1
         }
       ],
+      "properties": { "mass": 0, 
+      "restitution": 0.0, 
+      "friction": 0.0, 
+      "MotionType": "ANIMATED", 
+      "isTrigger": true },
       "position": [0, -12.7, 40],
       "placementRelTo": "WSA.EndEffector",
       "parentObject": "WSA.EndEffector"
     },
     {
       "id": "WSA.Gripper2",
-      "type": "https://standards.buildingsmart.org/IFC/DEV/IFC4/ADD1/OWL#IfcElementAssembly",
+      "type": "https://w3id.org/ontoeng/factory#JawFinger",
       "representations": [
         {
           "file": "UR.glb#URgripper2",
           "unit": 1
         }
       ],
+      "properties": { "mass": 0, 
+      "restitution": 0.0, 
+      "friction": 0.0, 
+      "MotionType": "ANIMATED", 
+      "isTrigger": true },
       "position": [0, 14.3, 40],
       "placementRelTo": "WSA.EndEffector",
       "parentObject": "WSA.EndEffector"
@@ -590,9 +600,46 @@
           "unit": 1
         }
       ],
-      "position": [-330, 0, 12.5],
+      "position": [0, 0, 0],
       "placementRelTo": "WSA",
-      "parentObject": "WSA"
+      "parentObject": "WSA",
+      "statechart": {
+          "id": "WSA_SC",
+          "initial": "rest",
+          "states": {
+            "rest": {
+              "on": { "goPick": "pick" },
+              "entry": [
+                { "action": "moveTo", "target": "WSA.link1", "rotation": [0, 0.0, 0] },
+                { "action": "moveTo", "target": "WSA.link2", "rotation": [0, 0, 0.0] },
+                { "action": "moveTo", "target": "WSA.link3", "rotation": [0, 0, 0.0] },
+                { "action": "moveTo", "target": "WSA.link4", "rotation": [0, 0, 0.0] },
+                { "action": "moveTo", "target": "WSA.link5", "rotation": [0, 0.0, 0] },
+                { "action": "moveTo", "target": "WSA.link6", "rotation": [0, 0, 0.0] },
+                { "action": "moveTo", "target": "WSA.Gripper1", "position": [0, -38.2, 40] },
+                { "action": "moveTo", "target": "WSA.Gripper2", "position": [0, 39.8, 40] }
+              ]
+            },
+            "pick": {
+              "on": { "goPlace": "place" },
+              "entry": [
+                "… i 6 giunti nella posa sopra il pezzo …",
+                { "action": "moveTo", "target": "WSA.Gripper1", "position": [0, -30.7, 40], "delay": 1500 },
+                { "action": "moveTo", "target": "WSA.Gripper2", "position": [0, 32.3, 40], "delay": 1500 },
+                { "action": "sendEvent", "target": "goPlace", "delay": 3000 }
+              ]
+            },
+            "place": {
+              "on": { "goRest": "rest" },
+              "entry": [
+                "… i 6 giunti nella posa sopra l'AGV …",
+                { "action": "moveTo", "target": "WSA.Gripper1", "position": [0, -38.2, 40], "delay": 1500 },
+                { "action": "moveTo", "target": "WSA.Gripper2", "position": [0, 39.8, 40], "delay": 1500 },
+                { "action": "sendEvent", "target": "goRest", "delay": 3000 }
+              ]
+            }
+          }
+        }
     },
     {
       "id": "WSB",
@@ -792,7 +839,7 @@
           "unit": 1
         }
       ],
-      "position": [110, 0, 1400],
+      "position": [-150, 0, 1280],
       "rotation": [0, 0, 0],
       "placementRelTo": "building",
       "properties": {
