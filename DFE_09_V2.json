@@ -888,9 +888,9 @@
 			"id": "Sensor1",
 			"type": "https://w3id.org/ontoeng/factory#SensorBarrier",
 			"position": [
-				0.094,
-				0.219,
-				0.9
+				110,
+				230,
+				960
 			],
 			"rotation": [
 				0,
@@ -945,13 +945,13 @@
 			"id": "Receiver1",
 			"type": "https://w3id.org/ontoeng/factory#SensorBarrierReceiver",
 			"position": [
-				0,
+				-220,
 				0,
 				0
 			],
 			"rotation": [
 				0,
-				0,
+				3.1416,
 				0
 			],
 			"placementRelTo": "Sensor1",
