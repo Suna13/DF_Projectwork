@@ -49,7 +49,8 @@
     "WSB.Conveyor",
     "WSB.PalletPosition",
     "WSB.Robot",
-    "Sensor1"
+    "Sensor1",
+    "Receiver1"
   ],
    "assets":  [
     {
@@ -939,6 +940,28 @@
 				},
 				"initial": "Idle"
 			}
+		},
+        {
+			"id": "Receiver1",
+			"type": "https://w3id.org/ontoeng/factory#SensorBarrierReceiver",
+			"position": [
+				0,
+				0,
+				100
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"placementRelTo": "Sensor1",
+			"parentObject": "Sensor1",
+			"representations": [
+				{
+					"file": "Sensor2.glb",
+					"unit": 1
+				}
+			]
 		}
   ]
 }
