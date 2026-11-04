@@ -200,6 +200,8 @@
             "WSArest": {
               "on": { "WSAgoPick": "WSApick" },
               "entry": [
+                { "action": "moveTo", "target": "WSA.Gripper1", "position": [0, -38.2, 40], "delay": 1500 },
+                { "action": "moveTo", "target": "WSA.Gripper2", "position": [0, 39.8, 40], "delay": 1500 },
                 { "action": "moveTo", "target": "WSA.link1", "position": [0, 86.05, 0],"rotation": [0, 0.84055, 0] },
                 { "action": "moveTo", "target": "WSA.link2", "position": [0, 65.85, 54], "rotation": [0, 0, -0.5] },
                 { "action": "moveTo", "target": "WSA.link3", "position": [0,  243.65, 23.6],"rotation": [0, 0, 2.045] },
@@ -232,9 +234,7 @@
                 { "action": "moveTo", "target": "WSA.link4", "position": [0,  213, -8],"rotation": [0, 0, 0.0] },
                 { "action": "moveTo", "target": "WSA.link5", "position": [0,  42.6, 40.8],"rotation": [0, -1.5707953, 0] },
                 { "action": "moveTo", "target": "WSA.link6", "position": [0,  40.8, 42.6],"rotation": [0, 0, 1.5708] },
-                { "action": "sendEvent", "target": "WSAgoRest", "delay": 3000 },
-                { "action": "moveTo", "target": "WSA.Gripper1", "position": [0, -38.2, 40], "delay": 1500 },
-                { "action": "moveTo", "target": "WSA.Gripper2", "position": [0, 39.8, 40], "delay": 1500 }
+                { "action": "sendEvent", "target": "WSAgoRest", "delay": 3000 }
               ]
             }
           }
@@ -362,8 +362,8 @@
       "properties": { "mass": 0, 
       "restitution": 0.0, 
       "friction": 0.0, 
-      "MotionType": "ANIMATED", 
-      "isTrigger": true },
+      "MotionType": "ANIMATED"
+      },
       "position": [0, -38.2, 40],
       "placementRelTo": "WSA.EndEffector",
       "parentObject": "WSA.EndEffector"
@@ -380,8 +380,8 @@
       "properties": { "mass": 0, 
       "restitution": 0.0, 
       "friction": 0.0, 
-      "MotionType": "ANIMATED", 
-      "isTrigger": true },
+      "MotionType": "ANIMATED"
+       },
       "position": [0, 39.8, 40],
       "placementRelTo": "WSA.EndEffector",
       "parentObject": "WSA.EndEffector"
