@@ -32,6 +32,8 @@
     "WSA.Gripper2",
     "WSA.Workholding",
     "WSA.Robot",
+    "WSA.Pad1",
+    "WSA.Pad2",
     "WSB",
     "WSB.base",
     "WSB.link1",
@@ -412,6 +414,24 @@
       "position": [0, 0, 0],
       "placementRelTo": "WSA",
       "parentObject": "WSA"
+    },
+    {
+      "id": "WSA.Pad1",
+      "type": "https://w3id.org/ontoeng/factory#JawFinger",
+      "representations": [ { "file": "box(1, 8, 8, 30)" } ],
+      "position": [0, 0, 15],
+      "placementRelTo": "WSA.Gripper1",
+      "parentObject": "WSA.Gripper1",
+      "properties": { "mass": 0, "restitution": 0.0, "friction": 0.0, "MotionType": "ANIMATED" }
+    },
+    {
+      "id": "WSA.Pad2",
+      "type": "https://w3id.org/ontoeng/factory#JawFinger",
+      "representations": [ { "file": "box(1, 8, 8, 30)" } ],
+      "position": [0, 0, 15],
+      "placementRelTo": "WSA.Gripper2",
+      "parentObject": "WSA.Gripper2",
+      "properties": { "mass": 0, "restitution": 0.0, "friction": 0.0, "MotionType": "ANIMATED" }
     },
     {
       "id":  "AGV",
