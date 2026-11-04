@@ -74,7 +74,7 @@
       },
       "statechart": {
         "id": "B1_SC",
-        "initial": "idle",
+        "initial": "entry",
         "states": {
           "idle": {
             "on": {
@@ -200,14 +200,14 @@
             "WSArest": {
               "on": { "WSAgoPick": "WSApick" },
               "entry": [
-                { "action": "moveTo", "target": "WSA.Gripper1", "position": [0, -38.2, 40], "delay": 1500 },
-                { "action": "moveTo", "target": "WSA.Gripper2", "position": [0, 39.8, 40], "delay": 1500 },
-                { "action": "moveTo", "target": "WSA.link1", "position": [0, 86.05, 0],"rotation": [0, 0.84055, 0] },
-                { "action": "moveTo", "target": "WSA.link2", "position": [0, 65.85, 54], "rotation": [0, 0, -0.5] },
-                { "action": "moveTo", "target": "WSA.link3", "position": [0,  243.65, 23.6],"rotation": [0, 0, 2.045] },
-                { "action": "moveTo", "target": "WSA.link4", "position": [0,  213, -8],"rotation": [0, 0, 1.44] },
-                { "action": "moveTo", "target": "WSA.link5", "position": [0,  42.6, 40.8],"rotation": [0, 0.86, 0] },
-                { "action": "moveTo", "target": "WSA.link6", "position": [0,  40.8, 42.6],"rotation": [0, 0, 1.511] },
+                { "action": "moveTo", "target": "WSA.Gripper1", "position": [0, -21, 40], "delay": 1500 },
+                { "action": "moveTo", "target": "WSA.Gripper2", "position": [0, 21, 40], "delay": 1500 },
+                { "action": "moveTo", "target": "WSA.link1", "position": [0, 86.05, 0],"rotation": [0, -0.9599353, 0] },
+                { "action": "moveTo", "target": "WSA.link2", "position": [0, 65.85, 54], "rotation": [0, 0, -0.6457753] },
+                { "action": "moveTo", "target": "WSA.link3", "position": [0,  243.65, 23.6],"rotation": [0, 0, 1.85005] },
+                { "action": "moveTo", "target": "WSA.link4", "position": [0,  213, -8],"rotation": [0, 0, 0.0] },
+                { "action": "moveTo", "target": "WSA.link5", "position": [0,  42.6, 40.8],"rotation": [0, -1.4486253, 0] },
+                { "action": "moveTo", "target": "WSA.link6", "position": [0,  40.8, 42.6],"rotation": [0, 0, 1.5109315] },
                 { "action": "sendEvent", "target": "WSAgoRest", "delay": 3000 }
               ]
             },
@@ -364,7 +364,7 @@
       "friction": 0.0, 
       "MotionType": "ANIMATED"
       },
-      "position": [0, -38.2, 40],
+      "position": [0, -21, 40],
       "placementRelTo": "WSA.EndEffector",
       "parentObject": "WSA.EndEffector"
     },
@@ -382,7 +382,7 @@
       "friction": 0.0, 
       "MotionType": "ANIMATED"
        },
-      "position": [0, 39.8, 40],
+      "position": [0, 21, 40],
       "placementRelTo": "WSA.EndEffector",
       "parentObject": "WSA.EndEffector"
     },
