@@ -214,9 +214,9 @@
               "entry": [
                 { "action": "moveTo", "target": "WSA.link1", "position": [0, 86.05, 0],"rotation": [0, -0.2443453, 0] },
                 { "action": "moveTo", "target": "WSA.link2", "position": [0, 65.85, 54], "rotation": [0, 0, -0.0715585] },
-                { "action": "moveTo", "target": "WSA.link3", "position": [0,  243.65, 23.6],"rotation": [0, 0, -1.5707953] },
+                { "action": "moveTo", "target": "WSA.link3", "position": [0,  243.65, 23.6],"rotation": [0, 0, 1.6214] },
                 { "action": "moveTo", "target": "WSA.link4", "position": [0,  213, -8],"rotation": [0, 0, 0.0] },
-                { "action": "moveTo", "target": "WSA.link5", "position": [0,  42.6, 40.8],"rotation": [0, 4.71239, 0] },
+                { "action": "moveTo", "target": "WSA.link5", "position": [0,  42.6, 40.8],"rotation": [0, -1.5707953, 0] },
                 { "action": "moveTo", "target": "WSA.link6", "position": [0,  40.8, 42.6],"rotation": [0, 0, 1.242674] },
                 { "action": "moveTo", "target": "WSA.Gripper1", "position": [-1, -10, 40],"delay": 1500  },
                 { "action": "moveTo", "target": "WSA.Gripper2", "position": [-1, 13, 40],"delay": 1500  },
@@ -230,8 +230,8 @@
                 { "action": "moveTo", "target": "WSA.link2", "position": [0, 65.85, 54], "rotation": [0, 0, 1.090831] },
                 { "action": "moveTo", "target": "WSA.link3", "position": [0,  243.65, 23.6],"rotation": [0, 0, 0.445059] },
                 { "action": "moveTo", "target": "WSA.link4", "position": [0,  213, -8],"rotation": [0, 0, 0.0] },
-                { "action": "moveTo", "target": "WSA.link5", "position": [0,  42.6, 40.8],"rotation": [0, 4.71239, 0] },
-                { "action": "moveTo", "target": "WSA.link6", "position": [0,  40.8, 42.6],"rotation": [0, 0, -1.5708] },
+                { "action": "moveTo", "target": "WSA.link5", "position": [0,  42.6, 40.8],"rotation": [0, -1.5707953, 0] },
+                { "action": "moveTo", "target": "WSA.link6", "position": [0,  40.8, 42.6],"rotation": [0, 0, 1.5708] },
                 { "action": "sendEvent", "target": "WSAgoRest", "delay": 3000 },
                 { "action": "moveTo", "target": "WSA.Gripper1", "position": [0, -38.2, 40], "delay": 1500 },
                 { "action": "moveTo", "target": "WSA.Gripper2", "position": [0, 39.8, 40], "delay": 1500 }
