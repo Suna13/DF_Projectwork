@@ -364,7 +364,7 @@
       "friction": 0.0, 
       "MotionType": "ANIMATED", 
       "isTrigger": true },
-      "position": [0, -12.7, 40],
+      "position": [0, -38.2, 40],
       "placementRelTo": "WSA.EndEffector",
       "parentObject": "WSA.EndEffector"
     },
@@ -382,7 +382,7 @@
       "friction": 0.0, 
       "MotionType": "ANIMATED", 
       "isTrigger": true },
-      "position": [0, 14.3, 40],
+      "position": [0, 39.8, 40],
       "placementRelTo": "WSA.EndEffector",
       "parentObject": "WSA.EndEffector"
     },
